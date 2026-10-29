@@ -3,7 +3,7 @@ import { C, mono } from "../theme";
 
 // Personajes pictográficos sobrios (estilo Isotype): legibles, consistentes, sin caricatura.
 export const PERSONAJES = {
-  rosa: { nombre: "Rosa", rol: "DEMANDANTE", color: C.azul },
+  laura: { nombre: "Laura", rol: "DEMANDANTE", color: C.azul },
   mario: { nombre: "Mario", rol: "DEMANDADO", color: "#9A6418" },
   juez: { nombre: "Juez", rol: "ÓRGANO JURISDICCIONAL", color: C.tinta },
   apoderado: { nombre: "Apoderado", rol: "SIN FACULTAD", color: "#8A8172" },

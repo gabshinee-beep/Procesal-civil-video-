@@ -4,7 +4,7 @@ import { Grano } from "../components/Panel";
 import { C, mono, sans, serif } from "../theme";
 import { entra } from "../anim";
 
-// Piezas visuales del «expediente de Rosa y Mario», reutilizadas en todas las escenas v4.
+// Piezas visuales del «expediente de Laura y Mario», reutilizadas en todas las escenas v4.
 
 export const Escenario: React.FC<{ kicker: string; titulo?: string; desde?: number; children?: React.ReactNode; x?: number }> = ({ kicker, titulo, desde = 0, children, x = 120 }) => {
   const frame = useCurrentFrame();

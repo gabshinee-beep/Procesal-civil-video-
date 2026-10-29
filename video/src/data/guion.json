@@ -10,7 +10,7 @@
       "seccion": "Finalidad",
       "layout": "mixto",
       "texto": "Todo proceso tiene una finalidad: resolver un conflicto respetando las garantías del debido proceso. Pero el proceso avanza con actos, y esos actos pueden tener defectos. Para cuestionarlos existe la nulidad procesal: según Ana María Arrarte, un medio impugnatorio que permite cuestionar la validez o eficacia de un acto procesal, o de todo el proceso.",
-      "visual": "B-roll del expediente con el título. Tú a pantalla completa. En «resolver un conflicto», el escenario: Rosa, Mario y el Juzgado; una línea de garantías los une. Los actos viajan; en «defectos» uno se agrieta. En «nulidad procesal», ficha de glosario.",
+      "visual": "B-roll del expediente con el título. Tú a pantalla completa. En «resolver un conflicto», el escenario: Laura, Mario y el Juzgado; una línea de garantías los une. Los actos viajan; en «defectos» uno se agrieta. En «nulidad procesal», ficha de glosario.",
       "cues": [
         {
           "id": "titulo",
@@ -74,12 +74,12 @@
       "id": "caso",
       "seccion": "El caso",
       "layout": "mixto",
-      "texto": "Veámoslo con un caso. Rosa demanda a Mario, pero la demanda se notifica a un apoderado de Mario que no tenía facultad para recibirla. Aun así, Mario se entera y contesta a tiempo. ¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.",
+      "texto": "Veámoslo con un caso. Laura demanda a Mario, pero la demanda se notifica a un apoderado de Mario que no tenía facultad para recibirla. Aun así, Mario se entera y contesta a tiempo. ¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.",
       "visual": "Escenario completo con tu círculo: el sobre sale del Juzgado hacia Mario y se desvía al Apoderado (B-roll del sobre real antes). Línea punteada «debía llegar a Mario». Mario se entera y la contestación vuelve al Juzgado. «¿Prosperaría?»: acercamiento a ti; «No»: ✓ verde «cumplió su finalidad · sin perjuicio».",
       "cues": [
         {
-          "id": "rosa",
-          "ancla": "Rosa demanda"
+          "id": "laura",
+          "ancla": "Laura demanda"
         },
         {
           "id": "apoderado",
@@ -116,7 +116,7 @@
       ],
       "fundamento": "Ejemplo de la propia lectura (§5.2 b): notificación al apoderado; el demandado se apersona y contesta; el acto logró su propósito. CPC 436–437, 172.",
       "tarjeta": [
-        "Rosa demanda a Mario",
+        "Laura demanda a Mario",
         "notifican a apoderado sin facultad",
         "Mario se entera y contesta",
         "¿nulidad? No: finalidad + sin perjuicio"
@@ -372,7 +372,7 @@
       "seccion": "Consecuencias y cierre",
       "layout": "mixto",
       "texto": "Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando deja a alguien sin defensa. Como decía Couture: la anulación por la anulación no vale.",
-      "visual": "Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Rosa queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.",
+      "visual": "Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Laura queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.",
       "cues": [
         {
           "id": "vale",

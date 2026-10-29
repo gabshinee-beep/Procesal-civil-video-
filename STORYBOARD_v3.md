@@ -23,7 +23,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 > Imagina un juicio que ya lleva dos años. De pronto, alguien descubre que la demanda se notificó mal. ¿Basta ese error para anularlo todo? Para responder, sigamos el razonamiento de Ana María Arrarte.
 
 **E2 · Las partes** (40)
-> Rosa demanda a Mario. El proceso existe para resolver su conflicto, pero respetando garantías: que ambos puedan defenderse. Ese proceso avanza con actos, como la notificación de la demanda, y esos actos pueden tener vicios. Para cuestionarlos existe la nulidad.
+> Laura demanda a Mario. El proceso existe para resolver su conflicto, pero respetando garantías: que ambos puedan defenderse. Ese proceso avanza con actos, como la notificación de la demanda, y esos actos pueden tener vicios. Para cuestionarlos existe la nulidad.
 
 **E3 · Qué es** (39)
 > Es un medio impugnatorio: recurso, si el acto viciado está en una resolución; remedio, si no lo está, como esta notificación. Y el vicio puede estar en la forma, extrínseco, o en el contenido: capacidad, objeto o finalidad, intrínseco.
@@ -38,7 +38,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 > Arrarte los expone en cuatro principios que se aplican en conjunto. Especificidad: el artículo 437 sanciona este emplazamiento. Convalidación: en la primera versión, el acto cumplió su finalidad; queda convalidado. En la segunda, no, porque Mario pide la nulidad apenas se entera. Trascendencia: perdió su defensa, contestar y probar, y debe precisarlo, artículo 174. Protección: él no causó el vicio.
 
 **E7 · El desenlace** (46)
-> Primera versión: no se anula. Segunda: puede proceder la nulidad, pero el acto vale hasta que el juez la declare. Y si la declara, sus efectos son limitados: caen el emplazamiento y lo que dependía de él; la demanda de Rosa queda en pie. Artículo 173.
+> Primera versión: no se anula. Segunda: puede proceder la nulidad, pero el acto vale hasta que el juez la declare. Y si la declara, sus efectos son limitados: caen el emplazamiento y lo que dependía de él; la demanda de Laura queda en pie. Artículo 173.
 
 **E8 · Cierre** (55)
 > Por eso la nulidad es excepcional: en caso de duda, el proceso continúa. Entonces, ¿basta un error para anular un juicio? No. Solo cuando deja a alguien sin defensa y no hay otra forma de remediarlo. Las formas sirven al debido proceso, no al revés. Como enseña Couture: la anulación por la anulación no vale.
@@ -46,7 +46,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 **Total: 375 palabras.**
 
 **Cambios respecto de la v2:**
-- El caso entra desde el peldaño 1 («Rosa demanda a Mario»).
+- El caso entra desde el peldaño 1 («Laura demanda a Mario»).
 - La bifurcación ocurre en el **peldaño 5**, justo en el salto 5 → 6.
 - Los principios se aplican directamente a las dos versiones, así que la escena de principios y la de casos se funden en una.
 - Ahorro: 12 palabras menos y 2 escenas menos que grabar.
@@ -66,7 +66,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 | **6. Límites** ❤️ | E5 | «anular no protege a nadie. Y además cuesta: el proceso retrocede» + Couture | «Hacen falta criterios que las limiten» |
 | **7. Principios en conjunto** | E6 | «cuatro principios que se aplican en conjunto», aplicados a las dos versiones | Los principios separan las dos versiones; falta saber qué pasa con cada una |
 | **7 → 8** | E7 | «Primera versión: no se anula. Segunda: puede proceder… vale hasta que el juez la declare» | Si se declara, ¿hasta dónde llega? |
-| **8. Consecuencias** | E7–E8 | «efectos limitados… la demanda de Rosa queda en pie (173)» · «excepcional: en caso de duda, el proceso continúa» | Se responde la pregunta guía |
+| **8. Consecuencias** | E7–E8 | «efectos limitados… la demanda de Laura queda en pie (173)» · «excepcional: en caso de duda, el proceso continúa» | Se responde la pregunta guía |
 | Conclusión | E8 | «Solo cuando deja a alguien sin defensa… Las formas sirven al debido proceso, no al revés» | Cierra el círculo |
 
 **Garantía de precisión:** la versión 2 **nunca** se presenta como nulidad automática. Se dice «puede proceder» y «vale hasta que el juez la declare», y el sello NULO solo cae cuando digo «si la declara».
@@ -81,7 +81,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 | 0:02–0:06 | E1 | **A** | Tú: «Imagina un juicio…». Línea de tiempo «Año 0 → 2» a tu derecha |
 | 0:06–0:08 | E1 | R | B-roll: sobre deslizándose bajo la puerta (cámara lenta) |
 | 0:08–0:13 | E1 | **A** | Grieta roja en «Emplazamiento», acercamiento de cámara en «anularlo todo», «¿Todo?» y título |
-| 0:14–0:31 | E2 | **C** | Escenario de papel: aparecen **Rosa**, **Mario** y el **Juzgado**; una línea une a las partes con el juez («garantías: ambos pueden defenderse»). Los actos viajan como documentos y en «vicios» uno se agrieta. Tú en círculo |
+| 0:14–0:31 | E2 | **C** | Escenario de papel: aparecen **Laura**, **Mario** y el **Juzgado**; una línea une a las partes con el juez («garantías: ambos pueden defenderse»). Los actos viajan como documentos y en «vicios» uno se agrieta. Tú en círculo |
 | 0:31–0:47 | E3 | **B** | Tú en ventana vertical. Hoja: recurso / remedio («como esta notificación» → el sobre del caso aparece en la columna REMEDIO) y vicios extrínseco / intrínseco |
 | 0:48–0:58 | E4 | **C** | **Escena de impacto 1:** el sobre sale del Juzgado hacia Mario, se desvía al **Apoderado**; «debía llegar a Mario» punteado y «llegó al apoderado» en rojo; ficha «Arts. 436–437» |
 | 0:58–1:04 | E4 | **A** | Tú, plano más cerrado: «¿para qué existen las formas?». «Forma ≠ fin · Forma = garantía» |
@@ -102,7 +102,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 
 1. **«La notificación extraviada» (E4).** El sobre animado sale del Juzgado hacia Mario, pero su trayectoria se curva hacia el Apoderado. La línea punteada muestra dónde debía llegar. Va precedido por el B-roll real del sobre bajo la puerta, así que el espectador ve el mismo objeto en la realidad y en el diagrama. Hace visible qué es un vicio de forma sin decir una palabra de más.
 2. **«La bifurcación» (E4 → E6).** El mismo defecto parte la pantalla en dos versiones. Tú quedas en el corte central, literalmente en medio del dilema. Después, los 4 principios «escanean» las dos columnas a la vez y dan resultados distintos. Es la tesis del video hecha imagen: **mismo defecto, distinta consecuencia, porque las formas protegen la defensa**.
-3. **«El rebobinado selectivo» (E7).** Cae el sello NULO y la línea de tiempo de la versión 2 se rebobina, pero **solo** el emplazamiento y lo que dependía de él salen volando; la demanda de Rosa queda firme y brillando. Luego el proceso se vuelve a reproducir bien: nuevo emplazamiento válido y Mario contesta. Muestra el art. 173 y la idea de que la nulidad **rehace** el proceso, no lo destruye.
+3. **«El rebobinado selectivo» (E7).** Cae el sello NULO y la línea de tiempo de la versión 2 se rebobina, pero **solo** el emplazamiento y lo que dependía de él salen volando; la demanda de Laura queda firme y brillando. Luego el proceso se vuelve a reproducir bien: nuevo emplazamiento válido y Mario contesta. Muestra el art. 173 y la idea de que la nulidad **rehace** el proceso, no lo destruye.
 
 ---
 
@@ -113,7 +113,7 @@ Todos los formatos salen de **una sola forma de grabar**: plano medio en 4K. Los
 | Toma | Escena | Indicaciones |
 |---|---|---|
 | A1 | E1 Gancho | Energía alta, como quien cuenta un chisme jurídico 😄 |
-| A2 | E2 Las partes | Tono de narrador: «Rosa demanda a Mario» |
+| A2 | E2 Las partes | Tono de narrador: «Laura demanda a Mario» |
 | A3 | E3 Qué es | Didáctico, pausado |
 | A4 | E4 Bifurcación | En «Mira dos versiones», **gesto con la mano abierta hacia tu derecha** y luego hacia tu izquierda (las dos versiones) |
 | A5 | E5 Límites | Pausa breve antes de la cita de Couture |

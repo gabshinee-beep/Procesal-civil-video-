@@ -36,7 +36,7 @@ const Notificacion: React.FC = () => (
       </svg>
       <div style={{ fontFamily: mono, fontSize: 16, letterSpacing: 3, color: C.tinta }}>JUZGADO</div>
     </div>
-    <Personaje quien="rosa" x={420} y={760} />
+    <Personaje quien="laura" x={420} y={760} />
     <Personaje quien="mario" x={1520} y={760} />
     <Personaje quien="apoderado" x={1140} y={900} escala={0.85} maletin />
     {/* trayecto correcto (punteado gris) y trayecto real (rojo) */}

@@ -37,7 +37,7 @@ Graba **escena por escena**, en orden, con **2 o 3 tomas** cada una. Antes de ca
 | # | Escena | Duración aprox. | Indicación |
 |---|---|---|---|
 | 1 | Finalidad | 22 s | Abres tú, mirando al lente: "Todo proceso tiene una finalidad…" |
-| 2 | El caso | 19 s | Tono de narrador ("Rosa demanda a Mario"); en "¿Prosperaría…?" haz una pausa; el "No" firme |
+| 2 | El caso | 19 s | Tono de narrador ("Laura demanda a Mario"); en "¿Prosperaría…?" haz una pausa; el "No" firme |
 | 3 | ¿Recurso o remedio? | 14 s | Pausado, didáctico |
 | 4 | Elementos y vicios | 17 s | Puedes contar con los dedos: capacidad, objeto, finalidad, forma |
 | 5 | La forma como garantía | 22 s | "Y esta es la clave" con énfasis; en "cambiemos un dato", gesto con la mano |

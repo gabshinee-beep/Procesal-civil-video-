@@ -26,7 +26,7 @@ export const E8Cierre: React.FC = () => {
             y={360}
             ancho={1380}
             aparicion={-40}
-            etiquetas={["Demanda de Rosa", "Notificación", "Rebeldía", "Audiencia", "Sentencia"]}
+            etiquetas={["Demanda de Laura", "Notificación", "Rebeldía", "Audiencia", "Sentencia"]}
             marca={{ idx: 1, desde: 4, hasta: sello, texto: "VALE (PROVISIONALMENTE)", color: C.ambar }}
             sello={{ idx: 1, at: sello, texto: "NULO" }}
             domino={{ desdeIdx: 1, at: sello + 14 }}

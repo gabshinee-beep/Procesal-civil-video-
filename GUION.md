@@ -32,7 +32,7 @@
 
 **🎬 Lo que se ve**
 
-B-roll del expediente con el título. Tú a pantalla completa. En «resolver un conflicto», el escenario: Rosa, Mario y el Juzgado; una línea de garantías los une. Los actos viajan; en «defectos» uno se agrieta. En «nulidad procesal», ficha de glosario.
+B-roll del expediente con el título. Tú a pantalla completa. En «resolver un conflicto», el escenario: Laura, Mario y el Juzgado; una línea de garantías los une. Los actos viajan; en «defectos» uno se agrieta. En «nulidad procesal», ficha de glosario.
 
 **🃏 Tarjeta (lo único que miras antes de la toma)**
 
@@ -46,7 +46,7 @@ B-roll del expediente con el título. Tú a pantalla completa. En «resolver un 
 
 **🎙️ Lo que dices**
 
-> Veámoslo con un caso. Rosa demanda a Mario, pero la demanda se notifica a un apoderado de Mario que no tenía facultad para recibirla. Aun así, Mario se entera y contesta a tiempo. ¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.
+> Veámoslo con un caso. Laura demanda a Mario, pero la demanda se notifica a un apoderado de Mario que no tenía facultad para recibirla. Aun así, Mario se entera y contesta a tiempo. ¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.
 
 **🎬 Lo que se ve**
 
@@ -54,7 +54,7 @@ Escenario completo con tu círculo: el sobre sale del Juzgado hacia Mario y se d
 
 **🃏 Tarjeta (lo único que miras antes de la toma)**
 
-`Rosa demanda a Mario` → `notifican a apoderado sin facultad` → `Mario se entera y contesta` → `¿nulidad? No: finalidad + sin perjuicio`
+`Laura demanda a Mario` → `notifican a apoderado sin facultad` → `Mario se entera y contesta` → `¿nulidad? No: finalidad + sin perjuicio`
 
 **📚 Fundamento**: Ejemplo de la propia lectura (§5.2 b): notificación al apoderado; el demandado se apersona y contesta; el acto logró su propósito. CPC 436–437, 172.
 
@@ -158,7 +158,7 @@ Pantalla partida con las dos versiones; debajo, los 4 principios. Cada uno se en
 
 **🎬 Lo que se ve**
 
-Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Rosa queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.
+Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Laura queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.
 
 **🃏 Tarjeta (lo único que miras antes de la toma)**
 

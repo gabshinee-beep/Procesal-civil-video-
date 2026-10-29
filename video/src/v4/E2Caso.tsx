@@ -19,10 +19,10 @@ export const E2Caso: React.FC = () => {
   const [cx, cy] = bezier([1110, 470], [960, 400], [830, 380], tc);
   return (
     <AbsoluteFill style={{ background: C.noche }}>
-      <Escenario kicker="El caso de Rosa y Mario" titulo="Una notificación defectuosa">
+      <Escenario kicker="El caso de Laura y Mario" titulo="Una notificación defectuosa">
         <Juzgado x={830} y={230} />
-        <Aparece at={c("rosa")}><Personaje quien="rosa" x={560} y={700} /></Aparece>
-        <Aparece at={c("rosa") + 10}><Personaje quien="mario" x={1100} y={700} /></Aparece>
+        <Aparece at={c("laura")}><Personaje quien="laura" x={560} y={700} /></Aparece>
+        <Aparece at={c("laura") + 10}><Personaje quien="mario" x={1100} y={700} /></Aparece>
         <Aparece at={c("apoderado") - 4}><Personaje quien="apoderado" x={1480} y={720} escala={0.9} maletin /></Aparece>
         <svg width={1920} height={1080} style={{ position: "absolute", inset: 0 }}>
           <path d="M 830 370 Q 1000 410 1100 450" fill="none" stroke={C.linea} strokeWidth={4} strokeDasharray="10 10" opacity={entra(frame, sale, 14)} />
