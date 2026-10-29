@@ -3,11 +3,10 @@ import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { Camara } from "../components/Camara";
 import { Panel } from "../components/Panel";
 import { Tablero } from "../components/Tablero";
-import { Ficha } from "../components/Ficha";
 import { LineaTiempo } from "../components/LineaTiempo";
-import { duracionEscena, useCues } from "../tiempos";
+import { useCues } from "../tiempos";
 import { finBRoll } from "../components/BRoll";
-import { C, mono, sans, serif } from "../theme";
+import { C, sans, serif } from "../theme";
 import { entra, ventana } from "../anim";
 
 export const CasoB: React.FC = () => {
@@ -19,7 +18,7 @@ export const CasoB: React.FC = () => {
   return (
     <AbsoluteFill>
       <Camara escenaId="casoB" etiqueta="Caso B" />
-      <Panel kicker="05 · Caso B · cambia un solo dato" continuo salida={duracionEscena("casoB")}>
+      <Panel kicker="Demostración · Caso B · cambia un solo dato" continuo>
         <div style={{ position: "absolute", inset: 0, opacity: tablero }}>
           <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 30, color: C.tinta, opacity: entra(frame, c("datoB"), 16) }}>
             El demandado <span style={{ color: C.rojo }}>nunca se enteró</span>; el proceso siguió sin él
@@ -41,28 +40,17 @@ export const CasoB: React.FC = () => {
           </div>
         </div>
         <div style={{ position: "absolute", inset: 0, opacity: efectos }}>
-          <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 46, color: C.tinta }}>
-            {frame < c("domino") ? "Validez provisional" : "¿Qué cae?"}
-          </div>
-          <div style={{ fontFamily: sans, fontSize: 25, color: C.tintaSuave, marginTop: 8 }}>
-            {frame < c("domino") ? "El acto viciado vale hasta que el juez declare la nulidad." : "Solo el acto nulo y lo que depende de él. Lo anterior queda en pie."}
-          </div>
+          <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 46, color: C.tinta }}>Validez provisional</div>
+          <div style={{ fontFamily: sans, fontSize: 25, color: C.tintaSuave, marginTop: 8 }}>El acto viciado vale hasta que el juez declare la nulidad.</div>
           <LineaTiempo
             x={0}
             y={250}
             ancho={868}
             aparicion={cambio}
             etiquetas={["Demanda", "Emplazamiento", "Rebeldía", "Audiencia", "Sentencia"]}
-            domino={{ desdeIdx: 1, at: c("domino") + 6 }}
             marca={{ idx: 1, desde: cambio + 20, hasta: finBRoll("sello"), texto: "VALE (PROVISIONALMENTE)", color: C.ambar }}
             sello={{ idx: 1, at: finBRoll("sello"), texto: "NULO" }}
           />
-          <div style={{ position: "absolute", left: 0, top: 440, fontFamily: mono, fontSize: 19, letterSpacing: 2, color: C.verde, opacity: entra(frame, c("domino") + 30, 14) }}>
-            ▲ QUEDA EN PIE
-          </div>
-          <div style={{ position: "absolute", left: 0, top: 520 }}>
-            <Ficha at={c("a173")} texto="ART. 173 CPC · EXTENSIÓN DE LA NULIDAD" color={C.rojo} />
-          </div>
         </div>
       </Panel>
     </AbsoluteFill>

@@ -10,6 +10,12 @@ let md = `# Guion ${g.version}\n\n**${g.titulo}** · ${g.subtitulo}\n\n`;
 md += `> Total: **${palabras} palabras**. A 150 palabras/min ≈ ${mmss((palabras / 150) * 60 + 7)} con pausas y créditos. Límite interno: 2:55.\n`;
 md += `> Los tiempos son **estimados** (voz provisional). Con tus tomas reales se recalculan solos.\n`;
 md += `> ⚠️ El texto exacto sirve para revisar el contenido jurídico; **para grabar usa solo la tarjeta** de cada escena.\n\n`;
+md += `## La escalera de ideas en el guion\n\n| Peldaño | Escena | Fragmento hablado | Transición lógica al siguiente |\n|---|---|---|---|\n`;
+for (const r of g.escaleraTabla) {
+  if (!g.escenas.find((e) => e.id === r.escena).texto.includes(r.fragmento)) throw new Error(`Fragmento no está en el guion: ${r.fragmento}`);
+  md += `| ${r.peldano} | ${g.escenas.find((e) => e.id === r.escena).seccion} | «${r.fragmento}» | ${r.transicion} |\n`;
+}
+md += `\n`;
 for (const [i, e] of g.escenas.entries()) {
   const tt = t.escenas.find((x) => x.id === e.id);
   md += `---\n\n## Escena ${i + 1} · ${e.seccion}  \`${mmss(tt.inicio)}–${mmss(tt.inicio + tt.duracion)}\`  (${e.texto.split(/\s+/).length} palabras)\n\n`;

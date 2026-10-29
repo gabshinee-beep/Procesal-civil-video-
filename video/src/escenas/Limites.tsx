@@ -6,46 +6,34 @@ import { Ficha } from "../components/Ficha";
 import { LineaTiempo } from "../components/LineaTiempo";
 import { CitaCinetica } from "../components/CitaCinetica";
 import { useCues } from "../tiempos";
-import { C, serif } from "../theme";
+import { C, sans, serif } from "../theme";
 import { entra, rango, ventana } from "../anim";
 
-export const Problema: React.FC = () => {
+export const Limites: React.FC = () => {
   const frame = useCurrentFrame();
-  const c = useCues("problema");
-  const fase1 = ventana(frame, 0, c("garantias"));
-  const fase2 = ventana(frame, c("garantias"), c("couture"));
-  const fase3 = entra(frame, c("couture"), 18);
+  const c = useCues("limites");
+  const fase1 = ventana(frame, 0, c("couture"));
+  const fase2 = entra(frame, c("couture"), 16);
   const tachar = rango(frame, c("perjuicios") - 20, c("perjuicios") - 4);
   const resaltar = rango(frame, c("perjuicios"), c("perjuicios") + 16);
   return (
     <AbsoluteFill>
-      <Camara escenaId="problema" etiqueta="El problema" />
-      <Panel kicker="02 · El problema" continuo>
+      <Camara escenaId="limites" etiqueta="Los límites" />
+      <Panel kicker="Peldaño 6 · Necesidad de límites" continuo>
         <div style={{ position: "absolute", inset: 0, opacity: fase1 }}>
           <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 56, color: C.tinta }}>Anular es retroceder</div>
           <div style={{ marginTop: 10 }}>
             <Ficha at={8} tipo="autor" texto="Monroy, citado por Arrarte" color={C.tintaSuave} />
           </div>
-          <LineaTiempo x={0} y={300} ancho={868} aparicion={4} etiquetas={["Demanda", "Emplazamiento", "Contestación", "Audiencia", "Sentencia"]} rebobinar={{ idx: 1, at: c("costo") }} />
+          <LineaTiempo x={0} y={300} ancho={868} aparicion={0} etiquetas={["Demanda", "Emplazamiento", "Contestación", "Audiencia", "Sentencia"]} rebobinar={{ idx: 1, at: c("costo") }} />
         </div>
         <div style={{ position: "absolute", inset: 0, opacity: fase2 }}>
-          <div style={{ fontFamily: serif, fontSize: 84, color: C.tinta, marginTop: 70 }}>
-            Forma <span style={{ color: C.rojo }}>≠</span> fin
-          </div>
-          <div style={{ fontFamily: serif, fontSize: 84, color: C.verde, marginTop: 20, opacity: entra(frame, c("garantias") + 30, 16) }}>
-            Forma = garantía
-          </div>
-          <div style={{ marginTop: 40 }}>
-            <Ficha at={c("garantias") + 34} tipo="autor" texto="Calamandrei · Morello, citados por Arrarte" color={C.tintaSuave} />
-          </div>
-        </div>
-        <div style={{ position: "absolute", inset: 0, opacity: fase3 }}>
-          <div style={{ fontFamily: serif, fontSize: 140, lineHeight: 0.6, color: C.rojo, marginTop: 30 }}>“</div>
+          <div style={{ fontFamily: serif, fontSize: 130, lineHeight: 0.6, color: C.rojo, marginTop: 10 }}>“</div>
           <CitaCinetica
-            escenaId="problema"
+            escenaId="limites"
             texto="las nulidades no tienen por finalidad satisfacer pruritos formales, sino enmendar perjuicios efectivos."
             respaldoDesde={c("couture") + 20}
-            style={{ fontFamily: serif, fontSize: 52, lineHeight: 1.25, color: C.tinta }}
+            style={{ fontFamily: serif, fontSize: 50, lineHeight: 1.22, color: C.tinta }}
             estilo={(i) =>
               i === 7 || i === 8
                 ? { color: tachar > 0.5 ? C.tintaSuave : C.tinta, textDecorationLine: "line-through", textDecorationThickness: 5, textDecorationColor: `rgba(180,35,24,${tachar})` }
@@ -54,8 +42,12 @@ export const Problema: React.FC = () => {
                   : {}
             }
           />
-          <div style={{ marginTop: 30 }}>
+          <div style={{ marginTop: 18 }}>
             <Ficha at={c("couture") + 10} tipo="autor" texto="— Eduardo Couture" />
+          </div>
+          <div style={{ position: "absolute", left: 0, top: 520, display: "flex", alignItems: "center", gap: 16, opacity: entra(frame, c("criterios"), 14) }}>
+            <span style={{ fontFamily: serif, fontSize: 46, color: C.ambar }}>→</span>
+            <span style={{ fontFamily: sans, fontWeight: 700, fontSize: 32, color: C.tinta }}>Criterios que limiten la nulidad</span>
           </div>
         </div>
       </Panel>

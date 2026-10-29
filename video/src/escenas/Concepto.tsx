@@ -17,7 +17,7 @@ export const Concepto: React.FC = () => {
   return (
     <AbsoluteFill>
       <Camara escenaId="concepto" etiqueta="Qué es" />
-      <Panel kicker="01 · Concepto" entrada={4}>
+      <Panel kicker="Peldaño 4 · Naturaleza y alcance" continuo>
         <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 50, color: C.tinta }}>¿Qué es la nulidad?</div>
         <div style={{ marginTop: 22, opacity: entra(frame, c("definicion"), 16) }}>
           <span style={{ fontFamily: serif, fontSize: 58, color: C.tinta, position: "relative" }}>

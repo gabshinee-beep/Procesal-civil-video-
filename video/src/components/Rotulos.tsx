@@ -6,16 +6,18 @@ import { ventana } from "../anim";
 
 // Versión de respaldo: rótulos inferiores sobrios con autores y normas, sin animaciones complejas.
 const ROTULOS: [string, string, string, string][] = [
-  ["concepto", "definicion", "NULIDAD PROCESAL", "Medio impugnatorio contra un acto procesal o todo el proceso"],
-  ["concepto", "recurso", "ART. 356 CPC", "Recurso: acto en resolución · Remedio: acto fuera de ella"],
+  ["proceso", "garantias", "PELDAÑO 1 · FINALIDAD DEL PROCESO", "Resolver conflictos respetando garantías"],
+  ["proceso", "nulidad", "PELDAÑOS 2–3", "Los actos pueden tener vicios → existe la nulidad"],
+  ["concepto", "recurso", "PELDAÑO 4 · ART. 356 CPC", "Recurso: acto en resolución · Remedio: acto fuera de ella"],
   ["concepto", "vicios", "BERIZONCE, CIT. POR ARRARTE", "Vicios extrínsecos (forma) e intrínsecos (contenido)"],
-  ["problema", "couture", "EDUARDO COUTURE", "«No satisfacer pruritos formales, sino enmendar perjuicios efectivos»"],
-  ["principios", "p1", "PRINCIPIOS (ARRARTE)", "Especificidad · Convalidación · Trascendencia · Protección"],
+  ["formas", "garantias", "PELDAÑO 5 · CALAMANDREI", "Las formas no son fines: son garantías"],
+  ["limites", "couture", "PELDAÑO 6 · EDUARDO COUTURE", "«No satisfacer pruritos formales, sino enmendar perjuicios efectivos»"],
+  ["principios", "p1", "PELDAÑO 7 · PRINCIPIOS (ARRARTE)", "Especificidad · Convalidación · Trascendencia · Protección"],
   ["casoA", "sancion", "ART. 437 CPC", "Nulidad del emplazamiento defectuoso"],
   ["casoA", "sello", "ARTS. 172 Y 437 CPC", "Convalidado: el acto cumplió su finalidad"],
   ["casoB", "perjuicio", "ART. 174 CPC", "Interés: acreditar el perjuicio y la defensa perdida"],
   ["casoB", "proteccion", "ART. 175.1 CPC", "Improcedente si lo pide quien causó el vicio"],
-  ["casoB", "a173", "ART. 173 CPC", "Extensión: caen solo los actos dependientes"],
+  ["consecuencias", "a173", "PELDAÑO 8 · ART. 173 CPC", "Extensión: caen solo los actos dependientes"],
   ["cierre", "couture2", "EDUARDO COUTURE", "«La anulación por la anulación no vale»"],
 ];
 

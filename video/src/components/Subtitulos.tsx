@@ -16,10 +16,13 @@ export const bloques: Bloque[] = escenas.flatMap((e) => {
     if (g.length) out.push({ desde: g[0].desde, hasta: g[g.length - 1].hasta + 6, palabras: g });
     g = [];
   };
-  for (const p of ps) {
+  const fin = (w: string) => /[.?!:;]$/.test(w);
+  ps.forEach((p, i) => {
     g.push(p);
-    if (g.length >= 8 || /[.?!:;]$/.test(p.w) || (/,$/.test(p.w) && g.length >= 4)) cerrar();
-  }
+    // no dejar 1–2 palabras sueltas antes de un punto: se suman al bloque actual
+    const cola = ps.slice(i + 1, i + 3).some((q) => fin(q.w));
+    if ((g.length >= 8 && !cola) || g.length >= 11 || fin(p.w) || (/,$/.test(p.w) && g.length >= 4)) cerrar();
+  });
   cerrar();
   // sin solapes: cada bloque termina cuando empieza el siguiente
   out.forEach((b, i) => out[i + 1] && (b.hasta = Math.min(b.hasta, out[i + 1].desde)));

@@ -3,14 +3,17 @@ import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import tomas from "./data/tomas.json";
 import { Camara } from "./components/Camara";
 import { Subtitulos } from "./components/Subtitulos";
-import { Progreso } from "./components/Progreso";
+import { Escalera } from "./components/Escalera";
 import { Titulo, Creditos } from "./components/Titulo";
 import { Rotulos } from "./components/Rotulos";
 import { BRoll } from "./components/BRoll";
 import { Sonido } from "./components/Sonido";
 import { Gancho } from "./escenas/Gancho";
 import { Concepto } from "./escenas/Concepto";
-import { Problema } from "./escenas/Problema";
+import { Proceso } from "./escenas/Proceso";
+import { Formas } from "./escenas/Formas";
+import { Limites } from "./escenas/Limites";
+import { Consecuencias } from "./escenas/Consecuencias";
 import { Principios } from "./escenas/Principios";
 import { CasoA } from "./escenas/CasoA";
 import { CasoB } from "./escenas/CasoB";
@@ -20,11 +23,14 @@ import { C } from "./theme";
 
 const COMPLETO: Record<string, React.FC> = {
   gancho: Gancho,
+  proceso: Proceso,
   concepto: Concepto,
-  problema: Problema,
+  formas: Formas,
+  limites: Limites,
   principios: Principios,
   casoA: CasoA,
   casoB: CasoB,
+  consecuencias: Consecuencias,
   cierre: Cierre,
 };
 
@@ -46,7 +52,7 @@ export const Video: React.FC<{ modo: "completo" | "respaldo" }> = ({ modo }) => 
       {modo === "respaldo" && <Rotulos />}
       <BRoll />
       <Titulo at={tituloAt} hasta={tituloAt + f(3.6)} />
-      {modo === "completo" && <Progreso visibleDesde={tituloAt + f(3.6)} visibleHasta={inicioEscena("cierre")} />}
+      {modo === "completo" && <Escalera visibleDesde={Math.max(tituloAt + f(3.6), inicioEscena("proceso"))} visibleHasta={inicioEscena("cierre")} />}
       <Subtitulos />
       <Creditos at={inicioCreditos()} />
       <Sonido modo={modo} />

@@ -59,7 +59,7 @@ export const LineaTiempo: React.FC<Props> = ({ x, y, ancho, etiquetas, aparicion
                 border: `2px solid ${borde}`,
                 boxShadow: "0 8px 22px rgba(0,0,0,0.18)",
                 opacity: p * (1 - cae * 0.55),
-                transform: `translateY(${(1 - p) * 20}px) translateX(${temblor}px) rotate(${cae * 14}deg) translateY(${cae * 26}px)`,
+                transform: `translateY(${(1 - p) * 20}px) translateX(${temblor}px) rotate(${cae * 10}deg) translateY(${cae * 26}px)`,
                 transformOrigin: "100% 100%",
                 padding: "14px 11px",
                 boxSizing: "border-box",
