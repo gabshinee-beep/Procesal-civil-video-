@@ -1,0 +1,53 @@
+{
+  "_nota": "Planos de recurso (B-roll). Grábalos con el iPhone (cámara lenta 4K120 donde se indica), ponlos en public/footage/ y llena 'archivo' (y 'desde' en segundos). null = marcador provisional. Tu voz sigue sonando debajo. Nombra los archivos de B-roll empezando con BROLL_ (p. ej., BROLL_sobre.MOV) para conservar la cámara lenta.",
+  "planos": [
+    {
+      "id": "expediente",
+      "escena": "gancho",
+      "cue": "linea",
+      "offset": 0,
+      "dur": 2.4,
+      "descripcion": "Pila de papeles / folder de expediente sobre una mesa, la cámara avanza lento hacia ellos",
+      "modo": "Video 4K 30 · movimiento lento hacia adelante",
+      "archivo": null,
+      "desde": 0,
+      "lento": false
+    },
+    {
+      "id": "sobre",
+      "escena": "gancho",
+      "cue": "descubre",
+      "offset": 0,
+      "dur": 1.3,
+      "descripcion": "Un sobre (cédula de notificación) se desliza por debajo de una puerta",
+      "modo": "Cámara lenta 4K120 · cámara a ras del piso",
+      "archivo": null,
+      "desde": 0,
+      "lento": true
+    },
+    {
+      "id": "lectura",
+      "escena": "gancho",
+      "cue": "responder",
+      "offset": 0,
+      "dur": 1.4,
+      "descripcion": "Tu lectura de Arrarte impresa y subrayada; paneo lento sobre el título",
+      "modo": "Video 4K 30 · macro (acércate a 15 cm)",
+      "archivo": null,
+      "desde": 0,
+      "lento": false
+    },
+    {
+      "id": "sello",
+      "escena": "casoB",
+      "cue": "declara",
+      "offset": -8,
+      "dur": 1.0,
+      "descripcion": "Mano golpeando un sello de goma sobre una hoja",
+      "modo": "Cámara lenta 4K120 · plano cerrado",
+      "archivo": null,
+      "desde": 0,
+      "lento": true
+    }
+  ]
+}

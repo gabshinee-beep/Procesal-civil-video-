@@ -42,3 +42,30 @@ export const cue = (escenaId: string, cueId: string): number => {
 };
 
 export const useCues = (escenaId: string) => (cueId: string) => cue(escenaId, cueId);
+
+const norm = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9ñ]/g, "");
+
+// Palabras de una escena con sus frames (relativos a la escena): reales si hay transcripción,
+// si no, repartidas por la posición de cada palabra en el texto del guion.
+export type PalabraF = { w: string; desde: number; hasta: number };
+export const palabrasEscena = (id: string): PalabraF[] => {
+  const te = t(id);
+  if (te.palabras?.length) return te.palabras.map((p) => ({ w: p.w, desde: f(p.s), hasta: f(p.e) }));
+  const e = escenas.find((x) => x.id === id)!;
+  const L = e.texto.length;
+  return [...e.texto.matchAll(/\S+/g)].map((m) => ({
+    w: m[0],
+    desde: f((te.duracion * m.index!) / L),
+    hasta: f((te.duracion * (m.index! + m[0].length)) / L),
+  }));
+};
+
+// Frame en que se pronuncia cada palabra de un fragmento (para citas que aparecen palabra a palabra).
+export const marcasFragmento = (id: string, fragmento: string, respaldoDesde: number): number[] => {
+  const pals = palabrasEscena(id);
+  const obj = fragmento.split(/\s+/).map(norm);
+  const k = pals.findIndex((_, i) => norm(pals[i].w) === obj[0] && norm(pals[i + 1]?.w ?? "") === obj[1]);
+  if (k >= 0) return obj.map((_, j) => pals[Math.min(k + j, pals.length - 1)].desde + (k + j >= pals.length ? 4 * j : 0));
+  return obj.map((_, j) => respaldoDesde + j * 6); // si lo dijiste distinto: 5 palabras por segundo
+};

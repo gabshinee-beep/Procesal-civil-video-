@@ -19,7 +19,8 @@ for (const archivo of readdirSync(ORIGEN).filter((f) => /\.(mov|mp4|m4v)$/i.test
   const filtros = [
     hdr ? "zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p" : null,
     "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2",
-    "fps=30",
+    // B-roll en cámara lenta (BROLL_*): conserva los 120 fps; Remotion lo ralentiza ×4
+    /^BROLL_/i.test(archivo) ? null : "fps=30",
   ].filter(Boolean).join(",");
   console.log(`${archivo} → ${salida}${hdr ? " (HDR → SDR)" : ""}`);
   execFileSync("ffmpeg", ["-y", "-v", "error", "-stats", "-i", entrada, "-vf", filtros, "-c:v", "libx264", "-preset", "medium", "-crf", "16", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", salida], { stdio: "inherit" });

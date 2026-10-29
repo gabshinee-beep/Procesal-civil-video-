@@ -2,26 +2,32 @@ import React from "react";
 import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import tomas from "../data/tomas.json";
 import { C, mono, sans } from "../theme";
-import { rango } from "../anim";
+import { entra, rango } from "../anim";
 
 type Toma = { archivo: string; desde: number } | null;
 
 // Plano del presentador. Sin grabación todavía, muestra una toma provisional con la silueta
 // en el tercio izquierdo (el mismo encuadre que debes usar al grabar).
-export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [number, number] }> = ({
+// `golpes`: acercamientos de cámara en palabras clave (como un corte a plano más cerrado).
+export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [number, number]; golpes?: { at: number; escala: number }[] }> = ({
   escenaId,
   etiqueta,
   zoom = [1, 1.04],
+  golpes = [],
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
   const toma = (tomas as unknown as Record<string, Toma>)[escenaId];
-  const escala = rango(frame, 0, durationInFrames, zoom[0], zoom[1]);
+  const golpe = golpes.filter((g) => frame >= g.at).reduce((acc, g) => acc * (1 + (g.escala - 1) * entra(frame, g.at, 5)), 1);
+  const escala = rango(frame, 0, durationInFrames, zoom[0], zoom[1]) * golpe;
 
   if (toma) {
     return (
-      <AbsoluteFill style={{ transform: `scale(${escala})`, transformOrigin: "30% 40%" }}>
-        <OffthreadVideo src={staticFile(toma.archivo)} trimBefore={Math.round(toma.desde * fps)} />
+      <AbsoluteFill>
+        <AbsoluteFill style={{ transform: `scale(${escala})`, transformOrigin: "30% 38%", filter: "contrast(1.06) saturate(0.88) sepia(0.07) brightness(1.02)" }}>
+          <OffthreadVideo src={staticFile(toma.archivo)} trimBefore={Math.round(toma.desde * fps)} />
+        </AbsoluteFill>
+        <Acabado />
       </AbsoluteFill>
     );
   }
@@ -41,6 +47,7 @@ export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [numb
           </g>
         </svg>
       </AbsoluteFill>
+      <Acabado />
       <div style={{ position: "absolute", left: 60, bottom: 160, fontFamily: mono, fontSize: 20, letterSpacing: 2, color: "rgba(243,237,226,0.55)", textTransform: "uppercase" }}>
         ● Toma provisional · {etiqueta}
       </div>
@@ -48,5 +55,21 @@ export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [numb
         Aquí va tu grabación (plano medio, tercio izquierdo)
       </div>
     </AbsoluteFill>
+  );
+};
+
+// Acabado cinematográfico común: viñeta + grano de película animado (une la toma con el papel).
+export const Acabado: React.FC = () => {
+  const frame = useCurrentFrame();
+  return (
+    <>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 40% 45%, transparent 55%, rgba(0,0,0,0.38) 100%)" }} />
+      <svg width="100%" height="100%" style={{ position: "absolute", inset: 0, opacity: 0.07, mixBlendMode: "overlay" }}>
+        <filter id={`pelicula-${frame % 6}`}>
+          <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={2} seed={frame % 6} />
+        </filter>
+        <rect width="100%" height="100%" filter={`url(#pelicula-${frame % 6})`} />
+      </svg>
+    </>
   );
 };

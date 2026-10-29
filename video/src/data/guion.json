@@ -10,11 +10,15 @@
       "seccion": "Gancho",
       "layout": "camara",
       "texto": "Imagina un juicio que ya lleva dos años. Y de pronto, alguien descubre que la demanda se notificó mal. ¿Basta ese error para anular todo lo avanzado? Vamos a responderlo con la lectura de Ana María Arrarte.",
-      "visual": "Plano medio tuyo. A la derecha se construye una línea de tiempo del proceso (Demanda → Emplazamiento → Contestación → Audiencia → Sentencia) con un contador «Año 1… Año 2». En «se notificó mal», la tarjeta Emplazamiento se agrieta en rojo. En «anular todo», las tarjetas posteriores tiemblan y una flecha roja de retroceso recorre la línea. En «Ana María Arrarte» entra el título editorial.",
+      "visual": "Abre con B-roll documental: pila de papeles del expediente (cámara lenta). Corte a ti en plano medio; a la derecha se construye la línea de tiempo del proceso (Año 0 → Año 2). En «alguien descubre», B-roll: un sobre de notificación deslizándose bajo la puerta equivocada. Vuelves a cuadro y en «se notificó mal» la tarjeta Emplazamiento se agrieta en rojo (sonido de grieta). En «anular todo», acercamiento de cámara, flecha de retroceso y «¿Todo?». En «Vamos a responderlo», B-roll de tu lectura subrayada; en «Arrarte» entra el título con golpe grave.",
       "cues": [
         {
           "id": "linea",
           "ancla": "Imagina"
+        },
+        {
+          "id": "descubre",
+          "ancla": "alguien descubre"
         },
         {
           "id": "grieta",
@@ -23,6 +27,10 @@
         {
           "id": "rebobinar",
           "ancla": "anular todo"
+        },
+        {
+          "id": "responder",
+          "ancla": "Vamos a responderlo"
         },
         {
           "id": "titulo",
@@ -245,6 +253,10 @@
         {
           "id": "pregunta",
           "ancla": "¿basta un error"
+        },
+        {
+          "id": "no",
+          "ancla": "No. Solo"
         },
         {
           "id": "respuesta",

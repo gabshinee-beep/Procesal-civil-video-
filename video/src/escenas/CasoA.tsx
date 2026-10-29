@@ -15,7 +15,7 @@ export const CasoA: React.FC = () => {
   return (
     <AbsoluteFill>
       <Camara escenaId="casoA" etiqueta="Caso A" />
-      <Panel kicker="04 · Caso A · se defendió a tiempo">
+      <Panel kicker="04 · Caso A · se defendió a tiempo" continuo>
         <div style={{ display: "flex", alignItems: "center", gap: 18, opacity: entra(frame, c("vicio"), 16) }}>
           <span style={{ fontFamily: serif, fontWeight: 600, fontSize: 30, color: C.tinta }}>Emplazamiento a apoderado sin facultad</span>
           <Ficha at={c("vicio") + 6} texto="ARTS. 436–437" color={C.rojo} />

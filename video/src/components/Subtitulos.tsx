@@ -1,53 +1,29 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { escenas, f, timing } from "../tiempos";
-import { sans } from "../theme";
+import { escenas, inicioEscena, palabrasEscena, PalabraF } from "../tiempos";
+import { C, sans } from "../theme";
 
-type Bloque = { desde: number; hasta: number; texto: string };
+type Bloque = { desde: number; hasta: number; palabras: PalabraF[] };
 
-// Parte el texto de cada escena en frases cortas (máx. ~9 palabras) y las reparte en el tiempo.
-// Con la grabación real, esto se reemplaza por los tiempos palabra a palabra de Whisper.
-const trocear = (texto: string) => {
-  const piezas = texto.match(/[^,.;:?!]+[,.;:?!]*/g)?.map((s) => s.trim()).filter(Boolean) ?? [texto];
-  const out: string[] = [];
-  for (const p of piezas) {
-    const ult = out[out.length - 1];
-    if (ult && ult.split(" ").length + p.split(" ").length <= 9 && !/[.?!]$/.test(ult)) out[out.length - 1] = `${ult} ${p}`;
-    else out.push(p);
-  }
-  return out.flatMap((s) => {
-    const w = s.split(" ");
-    if (w.length <= 11) return [s];
-    const mitad = Math.ceil(w.length / 2);
-    return [w.slice(0, mitad).join(" "), w.slice(mitad).join(" ")];
-  });
-};
-
+// Subtítulos en bloques de hasta 8 palabras, cortados en la puntuación; la palabra que estás
+// diciendo se resalta. Con tomas reales usan lo que realmente dijiste (Whisper).
 export const bloques: Bloque[] = escenas.flatMap((e) => {
-  const t = timing.escenas.find((x) => x.id === e.id)!;
-  if (t.palabras?.length) {
-    // Con tomas reales: subtítulos con lo que realmente dijiste, palabra a palabra
-    const out: Bloque[] = [];
-    let grupo: typeof t.palabras = [];
-    for (const p of t.palabras) {
-      grupo.push(p);
-      if (grupo.length >= 8 || /[.?!,:;]$/.test(p.w)) {
-        out.push({ desde: f(t.inicio + grupo[0].s), hasta: f(t.inicio + p.e + 0.15), texto: grupo.map((g) => g.w).join(" ") });
-        grupo = [];
-      }
-    }
-    if (grupo.length) out.push({ desde: f(t.inicio + grupo[0].s), hasta: f(t.inicio + grupo[grupo.length - 1].e + 0.15), texto: grupo.map((g) => g.w).join(" ") });
-    return out;
+  const base = inicioEscena(e.id);
+  const ps = palabrasEscena(e.id).map((p) => ({ ...p, desde: p.desde + base, hasta: p.hasta + base }));
+  const out: Bloque[] = [];
+  let g: PalabraF[] = [];
+  const cerrar = () => {
+    if (g.length) out.push({ desde: g[0].desde, hasta: g[g.length - 1].hasta + 6, palabras: g });
+    g = [];
+  };
+  for (const p of ps) {
+    g.push(p);
+    if (g.length >= 8 || /[.?!:;]$/.test(p.w) || (/,$/.test(p.w) && g.length >= 4)) cerrar();
   }
-  const partes = trocear(e.texto);
-  const total = partes.reduce((a, p) => a + p.length, 0);
-  let acc = 0;
-  return partes.map((p) => {
-    const desde = f(t.inicio + (t.duracion * acc) / total);
-    acc += p.length;
-    const hasta = f(t.inicio + (t.duracion * acc) / total);
-    return { desde, hasta, texto: p.replace(/^¿?/, (m) => m) };
-  });
+  cerrar();
+  // sin solapes: cada bloque termina cuando empieza el siguiente
+  out.forEach((b, i) => out[i + 1] && (b.hasta = Math.min(b.hasta, out[i + 1].desde)));
+  return out;
 });
 
 export const Subtitulos: React.FC = () => {
@@ -56,21 +32,16 @@ export const Subtitulos: React.FC = () => {
   if (!b) return null;
   return (
     <div style={{ position: "absolute", left: 0, right: 0, bottom: 64, display: "flex", justifyContent: "center" }}>
-      <div
-        style={{
-          maxWidth: 1400,
-          padding: "10px 26px",
-          borderRadius: 10,
-          background: "rgba(15,14,12,0.74)",
-          fontFamily: sans,
-          fontWeight: 500,
-          fontSize: 36,
-          lineHeight: 1.25,
-          color: "#F7F3EC",
-          textAlign: "center",
-        }}
-      >
-        {b.texto}
+      <div style={{ maxWidth: 1400, padding: "10px 26px", borderRadius: 10, background: "rgba(15,14,12,0.74)", fontFamily: sans, fontWeight: 500, fontSize: 36, lineHeight: 1.25, color: "#F7F3EC", textAlign: "center" }}>
+        {b.palabras.map((p, i) => {
+          const dicha = frame >= p.desde;
+          const actual = frame >= p.desde && frame < p.hasta + 2;
+          return (
+            <span key={i} style={{ color: actual ? C.ambar : dicha ? "#F7F3EC" : "rgba(247,243,236,0.55)" }}>
+              {p.w}{" "}
+            </span>
+          );
+        })}
       </div>
     </div>
   );

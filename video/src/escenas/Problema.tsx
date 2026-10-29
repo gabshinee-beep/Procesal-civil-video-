@@ -4,6 +4,7 @@ import { Camara } from "../components/Camara";
 import { Panel } from "../components/Panel";
 import { Ficha } from "../components/Ficha";
 import { LineaTiempo } from "../components/LineaTiempo";
+import { CitaCinetica } from "../components/CitaCinetica";
 import { useCues } from "../tiempos";
 import { C, serif } from "../theme";
 import { entra, rango, ventana } from "../anim";
@@ -19,7 +20,7 @@ export const Problema: React.FC = () => {
   return (
     <AbsoluteFill>
       <Camara escenaId="problema" etiqueta="El problema" />
-      <Panel kicker="02 · El problema">
+      <Panel kicker="02 · El problema" continuo>
         <div style={{ position: "absolute", inset: 0, opacity: fase1 }}>
           <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 56, color: C.tinta }}>Anular es retroceder</div>
           <div style={{ marginTop: 10 }}>
@@ -40,15 +41,19 @@ export const Problema: React.FC = () => {
         </div>
         <div style={{ position: "absolute", inset: 0, opacity: fase3 }}>
           <div style={{ fontFamily: serif, fontSize: 140, lineHeight: 0.6, color: C.rojo, marginTop: 30 }}>“</div>
-          <div style={{ fontFamily: serif, fontSize: 52, lineHeight: 1.25, color: C.tinta }}>
-            Las nulidades no tienen por finalidad satisfacer{" "}
-            <span style={{ color: tachar > 0.5 ? C.tintaSuave : C.tinta, textDecorationLine: "line-through", textDecorationThickness: 5, textDecorationColor: `rgba(180,35,24,${tachar})` }}>pruritos formales</span>
-            , sino enmendar{" "}
-            <span style={{ background: `linear-gradient(to right, ${C.verde}33 ${resaltar * 100}%, transparent ${resaltar * 100}%)`, color: resaltar > 0.3 ? C.verde : C.tinta, fontWeight: 600 }}>
-              perjuicios efectivos
-            </span>
-            .
-          </div>
+          <CitaCinetica
+            escenaId="problema"
+            texto="las nulidades no tienen por finalidad satisfacer pruritos formales, sino enmendar perjuicios efectivos."
+            respaldoDesde={c("couture") + 20}
+            style={{ fontFamily: serif, fontSize: 52, lineHeight: 1.25, color: C.tinta }}
+            estilo={(i) =>
+              i === 7 || i === 8
+                ? { color: tachar > 0.5 ? C.tintaSuave : C.tinta, textDecorationLine: "line-through", textDecorationThickness: 5, textDecorationColor: `rgba(180,35,24,${tachar})` }
+                : i >= 11
+                  ? { color: resaltar > 0.3 ? C.verde : C.tinta, fontWeight: 600, background: `linear-gradient(to right, ${C.verde}33 ${resaltar * 100}%, transparent ${resaltar * 100}%)` }
+                  : {}
+            }
+          />
           <div style={{ marginTop: 30 }}>
             <Ficha at={c("couture") + 10} tipo="autor" texto="— Eduardo Couture" />
           </div>

@@ -16,7 +16,7 @@
 
 **🎬 Lo que se ve**
 
-Plano medio tuyo. A la derecha se construye una línea de tiempo del proceso (Demanda → Emplazamiento → Contestación → Audiencia → Sentencia) con un contador «Año 1… Año 2». En «se notificó mal», la tarjeta Emplazamiento se agrieta en rojo. En «anular todo», las tarjetas posteriores tiemblan y una flecha roja de retroceso recorre la línea. En «Ana María Arrarte» entra el título editorial.
+Abre con B-roll documental: pila de papeles del expediente (cámara lenta). Corte a ti en plano medio; a la derecha se construye la línea de tiempo del proceso (Año 0 → Año 2). En «alguien descubre», B-roll: un sobre de notificación deslizándose bajo la puerta equivocada. Vuelves a cuadro y en «se notificó mal» la tarjeta Emplazamiento se agrieta en rojo (sonido de grieta). En «anular todo», acercamiento de cámara, flecha de retroceso y «¿Todo?». En «Vamos a responderlo», B-roll de tu lectura subrayada; en «Arrarte» entra el título con golpe grave.
 
 **🃏 Tarjeta (lo único que miras antes de la toma)**
 

@@ -13,7 +13,7 @@ export const Principios: React.FC = () => {
   return (
     <AbsoluteFill>
       <Camara escenaId="principios" etiqueta="Principios" />
-      <Panel kicker="03 · El expediente bajo examen">
+      <Panel kicker="03 · El expediente bajo examen" continuo>
         <div style={{ display: "flex", alignItems: "baseline", gap: 16, opacity: entra(frame, c("conjunto"), 16) }}>
           <span style={{ fontFamily: serif, fontWeight: 600, fontSize: 38, color: C.tinta }}>Pautas concatenadas</span>
           <span style={{ fontFamily: sans, fontSize: 24, color: C.tintaSuave }}>no un checklist: se aplican en conjunto</span>

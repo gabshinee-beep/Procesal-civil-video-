@@ -6,6 +6,8 @@ import { Subtitulos } from "./components/Subtitulos";
 import { Progreso } from "./components/Progreso";
 import { Titulo, Creditos } from "./components/Titulo";
 import { Rotulos } from "./components/Rotulos";
+import { BRoll } from "./components/BRoll";
+import { Sonido } from "./components/Sonido";
 import { Gancho } from "./escenas/Gancho";
 import { Concepto } from "./escenas/Concepto";
 import { Problema } from "./escenas/Problema";
@@ -42,10 +44,12 @@ export const Video: React.FC<{ modo: "completo" | "respaldo" }> = ({ modo }) => 
         );
       })}
       {modo === "respaldo" && <Rotulos />}
+      <BRoll />
       <Titulo at={tituloAt} hasta={tituloAt + f(3.6)} />
       {modo === "completo" && <Progreso visibleDesde={tituloAt + f(3.6)} visibleHasta={inicioEscena("cierre")} />}
       <Subtitulos />
       <Creditos at={inicioCreditos()} />
+      <Sonido modo={modo} />
       {sinGrabacion && <Audio src={staticFile("maqueta/voz.mp3")} />}
     </AbsoluteFill>
   );

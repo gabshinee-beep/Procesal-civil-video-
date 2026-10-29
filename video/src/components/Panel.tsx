@@ -4,15 +4,18 @@ import { C, mono, PANEL } from "../theme";
 import { entra, sale } from "../anim";
 
 // Hoja de papel a la derecha del encuadre. Todo el razonamiento se dibuja aquí.
-export const Panel: React.FC<{ kicker: string; entrada?: number; salida?: number; children: React.ReactNode }> = ({
+// `continuo`: la hoja ya estaba en pantalla (escena anterior); solo se "pasa la página".
+export const Panel: React.FC<{ kicker: string; entrada?: number; salida?: number; continuo?: boolean; children: React.ReactNode }> = ({
   kicker,
   entrada = 0,
   salida,
+  continuo,
   children,
 }) => {
   const frame = useCurrentFrame();
-  const p = entra(frame, entrada, 22);
+  const p = continuo ? 1 : entra(frame, entrada, 22);
   const s = salida === undefined ? 1 : sale(frame, salida - 10, 10);
+  const pagina = continuo ? entra(frame, 0, 16) : 1;
   return (
     <div
       style={{
@@ -30,10 +33,13 @@ export const Panel: React.FC<{ kicker: string; entrada?: number; salida?: number
       }}
     >
       <Grano />
-      <div style={{ position: "absolute", left: 56, top: 40, fontFamily: mono, fontSize: 20, letterSpacing: 3, color: C.rojo, textTransform: "uppercase" }}>
+      {continuo && (
+        <div style={{ position: "absolute", left: 0, top: 0, height: 5, width: `${pagina * 100}%`, background: C.rojo, opacity: 1 - pagina * 0.6 }} />
+      )}
+      <div style={{ position: "absolute", left: 56, top: 40, opacity: pagina, fontFamily: mono, fontSize: 20, letterSpacing: 3, color: C.rojo, textTransform: "uppercase" }}>
         {kicker}
       </div>
-      <div style={{ position: "absolute", left: 56, right: 56, top: 92, bottom: 48 }}>{children}</div>
+      <div style={{ position: "absolute", left: 56, right: 56, top: 92, bottom: 48, clipPath: `inset(0 ${(1 - pagina) * 100}% 0 0)` }}>{children}</div>
     </div>
   );
 };

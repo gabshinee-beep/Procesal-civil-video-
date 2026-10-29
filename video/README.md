@@ -33,12 +33,16 @@ Remotion descarga su propio Chrome la primera vez. Las fuentes ya vienen en `pub
 4. **Transcribir**: `python scripts/transcribir.py` (imprime cada toma con sus tiempos).
 5. **Elegir tomas**: en `src/data/tomas.json`, indica por escena `archivo`, `desde` y `hasta` en segundos.
    Claude Code puede hacerlo leyendo la transcripción.
-6. **Tiempos reales**: `npm run tiempos` (avisa si el total supera 2:55).
-7. **Revisar**: `npm run studio`
-8. **Render**: `npm run render:final` y luego `npm run finalizar`, que normaliza a −16 LUFS, verifica la duración
+6. **B-roll**: en `src/data/broll.json`, pon `"archivo": "footage/BROLL_sobre.mp4"` (etc.) en cada plano.
+7. **Tiempos reales**: `npm run tiempos` (avisa si el total supera 2:55).
+8. **Revisar**: `npm run studio`
+9. **Render**: `npm run render:final` y luego `npm run finalizar`, que normaliza a −16 LUFS, verifica la duración
    y genera `out/FINAL_Nulidad_Procesal.mp4`.
 
 ## Utilidades
+
+- `node scripts/sfx.mjs`: regenera los efectos de sonido sintetizados (`public/sfx/`). Puedes reemplazar cualquiera por uno real con el mismo nombre.
+- `src/data/audio.json`: volumen de los efectos y música opcional (libre de derechos, a volumen bajo).
 
 - `npm run voz`: regenera la voz provisional robótica que solo sirve para medir tiempos.
 - `node scripts/stills.mjs 120 900 3200`: fotogramas sueltos para revisar el diseño.

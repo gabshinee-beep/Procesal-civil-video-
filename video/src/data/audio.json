@@ -1,0 +1,6 @@
+{
+  "_nota": "Volúmenes (0–1). Música opcional: pon un MP3 libre de derechos en public/audio/musica.mp3 y escribe \"musica\": \"audio/musica.mp3\".",
+  "sfx": 0.35,
+  "musica": null,
+  "volumenMusica": 0.07
+}
