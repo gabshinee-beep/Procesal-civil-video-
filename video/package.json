@@ -1,0 +1,29 @@
+{
+  "name": "nulidad-procesal-video",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "voz": "node scripts/voz-provisional.mjs",
+    "guion": "node scripts/exportar-guion.mjs",
+    "tomas": "node scripts/preparar-tomas.mjs",
+    "tiempos": "node scripts/tiempos-desde-tomas.mjs",
+    "render:intro": "remotion render Primeros20 out/primeros20.mp4",
+    "render:final": "remotion render Maqueta out/video.mp4",
+    "render:respaldo": "remotion render Respaldo out/respaldo.mp4",
+    "plan-c": "node scripts/respaldo-ffmpeg.mjs",
+    "finalizar": "node scripts/finalizar.mjs out/video.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "@remotion/fonts": "^4.0.539",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

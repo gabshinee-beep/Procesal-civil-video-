@@ -1,0 +1,10 @@
+{
+  "_nota": "Cuando grabes, pon cada toma elegida en public/footage/ y completa aquí: { \"archivo\": \"footage/gancho.mp4\", \"desde\": 1.2 } (segundos). null = toma provisional.",
+  "gancho": null,
+  "concepto": null,
+  "problema": null,
+  "principios": null,
+  "casoA": null,
+  "casoB": null,
+  "cierre": null
+}

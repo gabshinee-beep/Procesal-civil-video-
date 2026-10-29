@@ -1,0 +1,49 @@
+{
+  "fuente": "voz-provisional",
+  "wpm": 195,
+  "total": 170.363,
+  "escenas": [
+    {
+      "id": "gancho",
+      "inicio": 0,
+      "duracion": 12.987,
+      "nPalabras": 37
+    },
+    {
+      "id": "concepto",
+      "inicio": 13.437,
+      "duracion": 25.67,
+      "nPalabras": 66
+    },
+    {
+      "id": "problema",
+      "inicio": 39.557,
+      "duracion": 19.933,
+      "nPalabras": 46
+    },
+    {
+      "id": "principios",
+      "inicio": 59.941,
+      "duracion": 22.996,
+      "nPalabras": 51
+    },
+    {
+      "id": "casoA",
+      "inicio": 83.386,
+      "duracion": 25.717,
+      "nPalabras": 57
+    },
+    {
+      "id": "casoB",
+      "inicio": 109.554,
+      "duracion": 38.087,
+      "nPalabras": 95
+    },
+    {
+      "id": "cierre",
+      "inicio": 148.091,
+      "duracion": 17.822,
+      "nPalabras": 48
+    }
+  ]
+}
