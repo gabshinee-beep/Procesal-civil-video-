@@ -52,7 +52,7 @@ export const E8Cierre: React.FC = () => {
           <div style={{ position: "absolute", left: 1060, top: 200, width: 800, opacity: ventana(frame, final, c("couture")) }}>
             <div style={{ fontFamily: serif, fontWeight: 600, fontSize: 64, lineHeight: 1.08, color: C.papel }}>{guion.titulo}</div>
             <div style={{ fontFamily: sans, fontSize: 38, lineHeight: 1.3, color: C.papel, marginTop: 30, opacity: entra(frame, c("respuesta"), 12) }}>
-              Solo cuando deja a alguien <b style={{ color: C.ambar }}>sin defensa</b>.
+              Solo con un <b style={{ color: C.ambar }}>perjuicio real</b> —como dejar a alguien sin defensa— que no pueda remediarse de otro modo.
             </div>
           </div>
           <div style={{ position: "absolute", left: 1060, top: 300, width: 800, opacity: entra(frame, c("couture"), 16) }}>

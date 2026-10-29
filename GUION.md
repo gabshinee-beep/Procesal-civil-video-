@@ -1,8 +1,8 @@
-# Guion v4 — estructura de Augusto (un caso, dos desenlaces); borrador para ajustar palabras
+# Guion v4.1 — estructura de Augusto; precisiones en especificidad y en la respuesta final
 
 **¿Un error puede anular un juicio?** · La nulidad procesal según Ana María Arrarte
 
-> Total: **373 palabras**. A 150 palabras/min ≈ 2:36 con pausas y créditos. Límite interno: 2:55.
+> Total: **388 palabras**. A 150 palabras/min ≈ 2:42 con pausas y créditos. Límite interno: 2:55.
 > Los tiempos son **estimados** (voz provisional). Con tus tomas reales se recalculan solos.
 > ⚠️ El texto exacto sirve para revisar el contenido jurídico; **para grabar usa solo la tarjeta** de cada escena.
 
@@ -20,7 +20,7 @@
 | 6. Necesidad de límites | Necesidad de límites | «como anular hace retroceder el proceso y puede usarse para dilatarlo, la nulidad necesita principios que la limiten.» | Los principios que la limitan se aplican al caso. |
 | 7. Principios en conjunto | Los principios | «Especificidad: la ley debe sancionar el vicio» | Separan las dos versiones; falta saber qué efectos tiene la nulidad. |
 | 8. Consecuencias | Consecuencias y cierre | «el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa.» | Se responde la pregunta del título. |
-| Conclusión | Consecuencias y cierre | «Solo cuando deja a alguien sin defensa.» | Cierra el círculo con Couture. |
+| Conclusión | Consecuencias y cierre | «Solo cuando causa un perjuicio real, como dejar a alguien sin defensa, y no hay otra forma de remediarlo.» | Cierra el círculo con Couture. |
 
 ---
 
@@ -60,7 +60,7 @@ Escenario completo con tu círculo: el sobre sale del Juzgado hacia Mario y se d
 
 ---
 
-## Escena 3 · ¿Recurso o remedio?  `0:45–1:01`  (36 palabras)
+## Escena 3 · ¿Recurso o remedio?  `0:44–1:01`  (36 palabras)
 
 **🎙️ Lo que dices**
 
@@ -132,11 +132,11 @@ Ventana tuya. Dos candados: ABIERTO (pactables: competencia territorial, art. 25
 
 ---
 
-## Escena 7 · Los principios  `2:02–2:27`  (50 palabras)
+## Escena 7 · Los principios  `2:02–2:29`  (53 palabras)
 
 **🎙️ Lo que dices**
 
-> Especificidad: la ley debe sancionar el vicio; aquí, el artículo 437. Convalidación: si el acto cumplió su finalidad, como en el primer escenario, queda convalidado. Trascendencia: debe haber un perjuicio real; en el segundo, Mario perdió la oportunidad de contestar y probar. Protección: no puede pedirla quien causó el vicio.
+> Especificidad: la ley debe sancionar el vicio, expresa o implícitamente; aquí, el artículo 437. Convalidación: si el acto cumplió su finalidad, como en el primer escenario, queda convalidado. Trascendencia: debe haber un perjuicio real; en el segundo, Mario perdió la oportunidad de contestar y probar. Protección: no puede pedirla quien causó el vicio.
 
 **🎬 Lo que se ve**
 
@@ -150,11 +150,11 @@ Pantalla partida con las dos versiones; debajo, los 4 principios. Cada uno se en
 
 ---
 
-## Escena 8 · Consecuencias y cierre  `2:28–2:46`  (45 palabras)
+## Escena 8 · Consecuencias y cierre  `2:30–2:52`  (57 palabras)
 
 **🎙️ Lo que dices**
 
-> Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando deja a alguien sin defensa. Como decía Couture: la anulación por la anulación no vale.
+> Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando causa un perjuicio real, como dejar a alguien sin defensa, y no hay otra forma de remediarlo. Como decía Couture: la anulación por la anulación no vale.
 
 **🎬 Lo que se ve**
 
@@ -162,7 +162,7 @@ Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; domin
 
 **🃏 Tarjeta (lo único que miras antes de la toma)**
 
-`vale hasta que el juez declare` → `en duda, continúa` → `¿un error puede anular? solo si deja sin defensa` → `Couture`
+`vale hasta que el juez declare` → `en duda, continúa` → `¿un error puede anular? solo con perjuicio real sin otro remedio` → `Couture`
 
 **📚 Fundamento**: Arrarte §6 (validez provisional; interpretación restringida: en duda, continuar) y §5.3 (Couture). CPC 173 (extensión: solo caen los actos dependientes), mostrado en pantalla.
 

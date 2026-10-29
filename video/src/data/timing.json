@@ -1,7 +1,7 @@
 {
   "fuente": "voz-provisional",
   "wpm": 180,
-  "total": 170.563,
+  "total": 176.939,
   "escenas": [
     {
       "id": "finalidad",
@@ -12,44 +12,44 @@
     {
       "id": "caso",
       "inicio": 25.144,
-      "duracion": 19.426,
+      "duracion": 19.382,
       "nPalabras": 48
     },
     {
       "id": "remedio",
-      "inicio": 45.021,
+      "inicio": 44.977,
       "duracion": 16.045,
       "nPalabras": 36
     },
     {
       "id": "elementos",
-      "inicio": 61.516,
+      "inicio": 61.471,
       "duracion": 19.769,
       "nPalabras": 42
     },
     {
       "id": "forma",
-      "inicio": 81.735,
+      "inicio": 81.69,
       "duracion": 19.577,
       "nPalabras": 54
     },
     {
       "id": "limites",
-      "inicio": 101.762,
+      "inicio": 101.718,
       "duracion": 20.167,
       "nPalabras": 43
     },
     {
       "id": "principios",
-      "inicio": 122.379,
-      "duracion": 25.601,
-      "nPalabras": 50
+      "inicio": 122.334,
+      "duracion": 27.444,
+      "nPalabras": 53
     },
     {
       "id": "cierre",
-      "inicio": 148.43,
-      "duracion": 17.683,
-      "nPalabras": 45
+      "inicio": 150.228,
+      "duracion": 22.26,
+      "nPalabras": 57
     }
   ]
 }

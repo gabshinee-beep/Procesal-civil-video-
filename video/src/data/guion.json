@@ -1,5 +1,5 @@
 {
-  "version": "v4 — estructura de Augusto (un caso, dos desenlaces); borrador para ajustar palabras",
+  "version": "v4.1 — estructura de Augusto; precisiones en especificidad y en la respuesta final",
   "titulo": "¿Un error puede anular un juicio?",
   "subtitulo": "La nulidad procesal según Ana María Arrarte",
   "autor": "Augusto Paucar",
@@ -318,7 +318,7 @@
       "id": "principios",
       "seccion": "Los principios",
       "layout": "mixto",
-      "texto": "Especificidad: la ley debe sancionar el vicio; aquí, el artículo 437. Convalidación: si el acto cumplió su finalidad, como en el primer escenario, queda convalidado. Trascendencia: debe haber un perjuicio real; en el segundo, Mario perdió la oportunidad de contestar y probar. Protección: no puede pedirla quien causó el vicio.",
+      "texto": "Especificidad: la ley debe sancionar el vicio, expresa o implícitamente; aquí, el artículo 437. Convalidación: si el acto cumplió su finalidad, como en el primer escenario, queda convalidado. Trascendencia: debe haber un perjuicio real; en el segundo, Mario perdió la oportunidad de contestar y probar. Protección: no puede pedirla quien causó el vicio.",
       "visual": "Pantalla partida con las dos versiones; debajo, los 4 principios. Cada uno se enciende en ambas columnas a la vez con su artículo. Versión 1 → verde (convalidado). Versión 2 → ámbar (puede proceder).",
       "cues": [
         {
@@ -371,7 +371,7 @@
       "id": "cierre",
       "seccion": "Consecuencias y cierre",
       "layout": "mixto",
-      "texto": "Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando deja a alguien sin defensa. Como decía Couture: la anulación por la anulación no vale.",
+      "texto": "Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando causa un perjuicio real, como dejar a alguien sin defensa, y no hay otra forma de remediarlo. Como decía Couture: la anulación por la anulación no vale.",
       "visual": "Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Laura queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.",
       "cues": [
         {
@@ -407,7 +407,7 @@
       "tarjeta": [
         "vale hasta que el juez declare",
         "en duda, continúa",
-        "¿un error puede anular? solo si deja sin defensa",
+        "¿un error puede anular? solo con perjuicio real sin otro remedio",
         "Couture"
       ],
       "peldanos": [
@@ -498,7 +498,7 @@
     {
       "peldano": "Conclusión",
       "escena": "cierre",
-      "fragmento": "Solo cuando deja a alguien sin defensa.",
+      "fragmento": "Solo cuando causa un perjuicio real, como dejar a alguien sin defensa, y no hay otra forma de remediarlo.",
       "transicion": "Cierra el círculo con Couture."
     }
   ]
