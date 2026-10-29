@@ -15,7 +15,7 @@ const peldanoActual = (frame: number) => {
     for (const p of e.peldanos as { n: number; cue?: string }[]) {
       if (frame >= base + (p.cue ? cue(e.id, p.cue) : 0)) n = Math.max(n, p.n);
     }
-    demo = e.id.startsWith("caso");
+    demo = e.id === "caso";
   }
   return { n, demo };
 };
@@ -26,7 +26,7 @@ export const Escalera: React.FC<{ visibleDesde: number; visibleHasta: number }> 
   const { n, demo } = peldanoActual(frame);
   const o = entra(frame, visibleDesde, 16);
   return (
-    <div style={{ position: "absolute", left: 880, top: 30, height: 74, display: "flex", alignItems: "flex-end", gap: 14, opacity: o }}>
+    <div style={{ position: "absolute", right: 60, top: 26, height: 64, padding: "10px 18px", borderRadius: 12, background: "rgba(20,18,16,0.86)", display: "flex", alignItems: "flex-end", gap: 14, opacity: o }}>
       <div style={{ display: "flex", alignItems: "flex-end", gap: 4 }}>
         {guion.escalera.map((_, i) => {
           const k = i + 1;
@@ -35,8 +35,8 @@ export const Escalera: React.FC<{ visibleDesde: number; visibleHasta: number }> 
             <div
               key={k}
               style={{
-                width: 20,
-                height: 8 + i * 8,
+                width: 16,
+                height: 6 + i * 6,
                 borderRadius: 3,
                 background: k === n ? C.rojo : on ? C.papel : "rgba(243,237,226,0.16)",
                 transition: "none",
@@ -46,9 +46,9 @@ export const Escalera: React.FC<{ visibleDesde: number; visibleHasta: number }> 
         })}
       </div>
       <div style={{ fontFamily: mono, fontSize: 17, letterSpacing: 2.5, color: C.papel, textTransform: "uppercase", paddingBottom: 2 }}>
-        <span style={{ color: C.rojo }}>{demo ? "Demostración" : `Peldaño ${n}/8`}</span>
+        <span style={{ color: C.rojo }}>{demo ? "El caso" : `Peldaño ${n}/8`}</span>
         {"  ·  "}
-        {demo ? "los principios, aplicados" : guion.escalera[n - 1]}
+        {demo ? "una notificación defectuosa" : guion.escalera[n - 1]}
       </div>
     </div>
   );

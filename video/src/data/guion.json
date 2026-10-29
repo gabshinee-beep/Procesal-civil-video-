@@ -1,86 +1,60 @@
 {
-  "version": "v2 — escalera de ideas como columna vertebral (borrador para revisión)",
-  "titulo": "¿Basta un error para anular un juicio?",
+  "version": "v4 — estructura de Augusto (un caso, dos desenlaces); borrador para ajustar palabras",
+  "titulo": "¿Un error puede anular un juicio?",
   "subtitulo": "La nulidad procesal según Ana María Arrarte",
   "autor": "Augusto Paucar",
   "curso": "Derecho Procesal Civil II · Universidad de Lima",
   "escenas": [
     {
-      "id": "gancho",
-      "seccion": "Gancho",
-      "layout": "camara",
-      "texto": "Imagina un juicio que ya lleva dos años. De pronto, alguien descubre que la demanda se notificó mal. ¿Basta ese error para anularlo todo? Para responder, sigamos el razonamiento de Ana María Arrarte.",
-      "visual": "Abre con B-roll documental: pila de papeles del expediente (cámara lenta). Corte a ti en plano medio; a la derecha se construye la línea de tiempo del proceso (Año 0 → Año 2). En «alguien descubre», B-roll: un sobre de notificación deslizándose bajo la puerta equivocada. Vuelves a cuadro y en «se notificó mal» la tarjeta Emplazamiento se agrieta en rojo (sonido de grieta). En «anular todo», acercamiento de cámara, flecha de retroceso y «¿Todo?». En «Para responder», B-roll de tu lectura subrayada; en «Arrarte» entra el título con golpe grave.",
+      "id": "finalidad",
+      "seccion": "Finalidad",
+      "layout": "mixto",
+      "texto": "Todo proceso tiene una finalidad: resolver un conflicto respetando las garantías del debido proceso. Pero el proceso avanza con actos, y esos actos pueden tener defectos. Para cuestionarlos existe la nulidad procesal: según Ana María Arrarte, un medio impugnatorio que permite cuestionar la validez o eficacia de un acto procesal, o de todo el proceso.",
+      "visual": "B-roll del expediente con el título. Tú a pantalla completa. En «resolver un conflicto», el escenario: Rosa, Mario y el Juzgado; una línea de garantías los une. Los actos viajan; en «defectos» uno se agrieta. En «nulidad procesal», ficha de glosario.",
       "cues": [
-        {
-          "id": "linea",
-          "ancla": "Imagina"
-        },
-        {
-          "id": "descubre",
-          "ancla": "alguien descubre"
-        },
-        {
-          "id": "grieta",
-          "ancla": "se notificó mal"
-        },
-        {
-          "id": "rebobinar",
-          "ancla": "anularlo todo"
-        },
-        {
-          "id": "responder",
-          "ancla": "Para responder"
-        },
         {
           "id": "titulo",
-          "ancla": "Ana María Arrarte"
-        }
-      ],
-      "fundamento": "Pregunta guía del video; se responde en el cierre. Ejemplo de la lectura: notificación defectuosa (§5.2).",
-      "tarjeta": [
-        "2 años de juicio",
-        "se notificó mal",
-        "¿basta ese error?",
-        "razonamiento de Arrarte"
-      ],
-      "peldanos": [],
-      "transicion": "La pregunta exige entender primero para qué existe el proceso."
-    },
-    {
-      "id": "proceso",
-      "seccion": "El proceso",
-      "layout": "panel",
-      "texto": "El proceso existe para resolver conflictos respetando garantías: que ambas partes puedan defenderse. Pero está hecho de actos, como notificaciones, audiencias y resoluciones, y esos actos pueden tener vicios. Para cuestionarlos existe la nulidad.",
-      "visual": "Panel: «El proceso» con Juez arriba y Demandante ⇄ Demandado; sello «garantías: ambas partes se defienden». En «hecho de actos» aparecen tres tarjetas (Notificación · Audiencia · Resolución). En «vicios» la Notificación se agrieta en rojo. En «existe la nulidad» entra la etiqueta roja NULIDAD apuntando al acto viciado.",
-      "cues": [
+          "ancla": "Todo proceso"
+        },
         {
-          "id": "finalidad",
-          "ancla": "resolver conflictos"
+          "id": "conflicto",
+          "ancla": "resolver un conflicto"
         },
         {
           "id": "garantias",
-          "ancla": "respetando garantías"
+          "ancla": "garantías del debido"
         },
         {
           "id": "actos",
-          "ancla": "hecho de actos"
+          "ancla": "avanza con actos"
         },
         {
-          "id": "vicios",
-          "ancla": "pueden tener vicios"
+          "id": "defectos",
+          "ancla": "pueden tener defectos"
         },
         {
           "id": "nulidad",
           "ancla": "existe la nulidad"
+        },
+        {
+          "id": "arrarte",
+          "ancla": "Ana María Arrarte"
+        },
+        {
+          "id": "impugnatorio",
+          "ancla": "medio impugnatorio"
+        },
+        {
+          "id": "validez",
+          "ancla": "validez o eficacia"
         }
       ],
-      "fundamento": "Arrarte §1 (la nulidad asegura el debido proceso evitando perjuicios reales) y §3 (los actos procesales y sus elementos pueden estar viciados).",
+      "fundamento": "Arrarte §1 y §2 (concepto: medio impugnatorio contra la validez o eficacia de un acto procesal o de todo el proceso).",
       "tarjeta": [
-        "resolver conflictos + garantías",
-        "hecho de actos",
-        "pueden tener vicios",
-        "→ existe la nulidad"
+        "finalidad: resolver con garantías",
+        "actos → defectos",
+        "→ nulidad (Arrarte)",
+        "medio impugnatorio: validez o eficacia"
       ],
       "peldanos": [
         {
@@ -88,435 +62,444 @@
         },
         {
           "n": 2,
-          "cue": "vicios"
+          "cue": "defectos"
         },
         {
           "n": 3,
           "cue": "nulidad"
         }
-      ],
-      "transicion": "Si la nulidad cuestiona actos viciados, hay que precisar qué clase de herramienta es y qué vicios ataca."
+      ]
     },
     {
-      "id": "concepto",
-      "seccion": "Qué es",
-      "layout": "panel",
-      "texto": "Es un medio impugnatorio: recurso, si el acto viciado está en una resolución; remedio, si no lo está, como una notificación. Y el vicio puede estar en la forma, extrínseco, o en el contenido: capacidad, objeto o finalidad, intrínseco.",
-      "visual": "Panel de papel a la derecha. Definición con «medio impugnatorio» subrayado. Luego, dos columnas: RECURSO (acto contenido en resolución) y REMEDIO (acto no contenido en resolución, p. ej., notificación), con la ficha «Art. 356 CPC». Al final, la ficha «Acto procesal» con sus cuatro elementos: la Forma se separa hacia afuera (extrínseco) y Capacidad · Objeto · Finalidad quedan dentro (intrínseco); crédito «Berizonce, citado por Arrarte».",
+      "id": "caso",
+      "seccion": "El caso",
+      "layout": "mixto",
+      "texto": "Veámoslo con un caso. Rosa demanda a Mario, pero la demanda se notifica a un apoderado de Mario que no tenía facultad para recibirla. Aun así, Mario se entera y contesta a tiempo. ¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.",
+      "visual": "Escenario completo con tu círculo: el sobre sale del Juzgado hacia Mario y se desvía al Apoderado (B-roll del sobre real antes). Línea punteada «debía llegar a Mario». Mario se entera y la contestación vuelve al Juzgado. «¿Prosperaría?»: acercamiento a ti; «No»: ✓ verde «cumplió su finalidad · sin perjuicio».",
       "cues": [
         {
-          "id": "definicion",
-          "ancla": "medio impugnatorio"
+          "id": "rosa",
+          "ancla": "Rosa demanda"
         },
         {
-          "id": "recurso",
-          "ancla": "recurso"
+          "id": "apoderado",
+          "ancla": "apoderado de Mario"
+        },
+        {
+          "id": "facultad",
+          "ancla": "no tenía facultad"
+        },
+        {
+          "id": "entera",
+          "ancla": "Mario se entera"
+        },
+        {
+          "id": "contesta",
+          "ancla": "contesta a tiempo"
+        },
+        {
+          "id": "pregunta",
+          "ancla": "¿Prosperaría"
+        },
+        {
+          "id": "no",
+          "ancla": "No: el acto"
+        },
+        {
+          "id": "finalidad",
+          "ancla": "cumplió su finalidad"
+        },
+        {
+          "id": "perjuicio",
+          "ancla": "perjuicio efectivo"
+        }
+      ],
+      "fundamento": "Ejemplo de la propia lectura (§5.2 b): notificación al apoderado; el demandado se apersona y contesta; el acto logró su propósito. CPC 436–437, 172.",
+      "tarjeta": [
+        "Rosa demanda a Mario",
+        "notifican a apoderado sin facultad",
+        "Mario se entera y contesta",
+        "¿nulidad? No: finalidad + sin perjuicio"
+      ],
+      "peldanos": [
+        {
+          "n": 3
+        }
+      ]
+    },
+    {
+      "id": "remedio",
+      "seccion": "¿Recurso o remedio?",
+      "layout": "mixto",
+      "texto": "Fíjate además en qué se cuestiona: una notificación no está contenida en una resolución judicial, así que aquí la nulidad funciona como remedio. Si el vicio estuviera en una resolución, como una sentencia, sería un recurso.",
+      "visual": "Pantalla dividida: tú en ventana. Dos bandejas: RECURSO (decreto · auto · sentencia) y REMEDIO (actos fuera de resoluciones). El sobre del caso cae en REMEDIO; en «sentencia», una sentencia cae en RECURSO. Ficha «Art. 356».",
+      "cues": [
+        {
+          "id": "que",
+          "ancla": "qué se cuestiona"
+        },
+        {
+          "id": "resolucion",
+          "ancla": "no está contenida"
         },
         {
           "id": "remedio",
-          "ancla": "remedio"
+          "ancla": "como remedio"
         },
         {
-          "id": "vicios",
-          "ancla": "Y el vicio"
+          "id": "sentencia",
+          "ancla": "como una sentencia"
         },
         {
-          "id": "extrinseco",
-          "ancla": "extrínseco"
-        },
-        {
-          "id": "intrinseco",
-          "ancla": "capacidad, objeto"
+          "id": "recurso",
+          "ancla": "sería un recurso"
         }
       ],
-      "fundamento": "Arrarte §2 (concepto; recursos y remedios, siguiendo a Monroy y el art. 356 CPC) y §3 (vicios extrínsecos e intrínsecos, siguiendo a Berizonce).",
+      "fundamento": "Arrarte §2 (Monroy; CPC art. 356: recursos contra actos contenidos en resoluciones; remedios contra actos no contenidos en ellas).",
       "tarjeta": [
-        "medio impugnatorio",
-        "resolución → recurso / si no → remedio",
-        "forma = extrínseco",
-        "contenido = intrínseco"
+        "¿qué se cuestiona?",
+        "notificación ≠ resolución → remedio",
+        "sentencia → recurso"
       ],
       "peldanos": [
         {
           "n": 4
         }
-      ],
-      "transicion": "La forma es el principal foco de nulidades (Arrarte §4), así que la pregunta siguiente es para qué existe."
+      ]
     },
     {
-      "id": "formas",
-      "seccion": "Las formas",
-      "layout": "panel",
-      "texto": "La pregunta clave es: ¿para qué existen las formas? No son un fin en sí mismas: son garantías del derecho de defensa, enseña Calamandrei. Entonces, si una forma falla pero nadie quedó indefenso, ¿qué sentido tendría anular?",
-      "visual": "Panel: «¿Para qué existen las formas?». «Forma ≠ fin» y luego «Forma = garantía» (Calamandrei · Morello). En «si una forma falla» aparece la ecuación: [forma incumplida] + [nadie indefenso] = ¿anular? con el signo de pregunta en rojo.",
+      "id": "elementos",
+      "seccion": "Elementos y vicios",
+      "layout": "mixto",
+      "texto": "¿Y dónde puede estar el defecto? Arrarte toma del acto jurídico sus elementos: capacidad, objeto, finalidad y forma, adaptados a la naturaleza pública del proceso. Si falla la forma, el vicio es extrínseco; si falla otro elemento, intrínseco. El nuestro es extrínseco.",
+      "visual": "Despiece del acto: la notificación se separa en capas (forma por fuera; capacidad, objeto y finalidad por dentro). Ficha «Art. 140 CC». La capa de forma se rompe en rojo (EXTRÍNSECO); luego las internas (INTRÍNSECO). El sobre del caso se marca en la capa de forma.",
       "cues": [
         {
-          "id": "pregunta",
-          "ancla": "para qué existen"
+          "id": "donde",
+          "ancla": "dónde puede estar"
         },
         {
-          "id": "garantias",
-          "ancla": "son garantías"
+          "id": "acto",
+          "ancla": "acto jurídico"
         },
         {
-          "id": "falla",
-          "ancla": "si una forma falla"
+          "id": "elementos",
+          "ancla": "capacidad, objeto"
         },
         {
-          "id": "sentido",
-          "ancla": "qué sentido"
+          "id": "publica",
+          "ancla": "naturaleza pública"
+        },
+        {
+          "id": "forma",
+          "ancla": "Si falla la forma"
+        },
+        {
+          "id": "intrinseco",
+          "ancla": "si falla otro"
+        },
+        {
+          "id": "nuestro",
+          "ancla": "El nuestro"
         }
       ],
-      "fundamento": "Arrarte §4: Morello (las formas, garantía para la defensa) y Calamandrei (las formas son una preciosa garantía de los derechos); la formalidad solo es trascendente si asegura el debido proceso.",
+      "fundamento": "Arrarte §3: elementos del acto jurídico (CC art. 140) aplicados al proceso, salvando su carácter público; vicios extrínsecos e intrínsecos (Berizonce).",
       "tarjeta": [
-        "¿para qué las formas?",
-        "no son fin: garantía (Calamandrei)",
-        "forma falla + nadie indefenso",
-        "¿qué sentido anular?"
+        "¿dónde está el defecto?",
+        "elementos del acto jurídico (art. 140 CC)",
+        "forma → extrínseco · otro → intrínseco",
+        "el nuestro: extrínseco"
+      ],
+      "peldanos": [
+        {
+          "n": 4
+        }
+      ]
+    },
+    {
+      "id": "forma",
+      "seccion": "La forma como garantía",
+      "layout": "mixto",
+      "texto": "Y esta es la clave: la forma no es un fin en sí misma, es una garantía de defensa. En nuestro caso falló la forma, pero se logró la finalidad. Ahora cambiemos un dato: si Mario nunca se hubiera enterado y el proceso siguiera sin él, el defecto sí lo habría dejado sin defensa.",
+      "visual": "Tú a pantalla completa: «Forma ≠ fin · Forma = garantía». En «cambiemos un dato», la pantalla se parte: VERSIÓN 1 (Mario contesta) / VERSIÓN 2 (Mario desvanecido, «?»). Tú en el corte central.",
+      "cues": [
+        {
+          "id": "clave",
+          "ancla": "esta es la clave"
+        },
+        {
+          "id": "fin",
+          "ancla": "no es un fin"
+        },
+        {
+          "id": "garantia",
+          "ancla": "garantía de defensa"
+        },
+        {
+          "id": "fallo",
+          "ancla": "falló la forma"
+        },
+        {
+          "id": "logro",
+          "ancla": "se logró la finalidad"
+        },
+        {
+          "id": "dato",
+          "ancla": "cambiemos un dato"
+        },
+        {
+          "id": "nunca",
+          "ancla": "nunca se hubiera enterado"
+        },
+        {
+          "id": "sindefensa",
+          "ancla": "sin defensa."
+        }
+      ],
+      "fundamento": "Arrarte §4: Morello y Calamandrei (las formas como garantía); la formalidad solo es trascendente si asegura el debido proceso.",
+      "tarjeta": [
+        "la clave: forma = garantía",
+        "falló la forma, se logró la finalidad",
+        "cambiemos un dato: nunca se enteró",
+        "→ sin defensa"
       ],
       "peldanos": [
         {
           "n": 5
         }
-      ],
-      "transicion": "Si anular sin indefensión no tiene sentido y además anular cuesta, se necesitan límites."
+      ]
     },
     {
       "id": "limites",
-      "seccion": "Los límites",
-      "layout": "panel",
-      "texto": "Además, anular cuesta: el proceso retrocede. Por eso, dice Couture, las nulidades no tienen por finalidad satisfacer pruritos formales, sino enmendar perjuicios efectivos. Hacen falta criterios que las limiten.",
-      "visual": "Panel: línea de tiempo con flecha de retroceso («Anular es retroceder», Monroy). Luego la cita de Couture aparece palabra por palabra: «pruritos formales» se tacha y «perjuicios efectivos» se resalta. En «criterios que las limiten» entra el rótulo «→ principios limitadores».",
+      "seccion": "Necesidad de límites",
+      "layout": "mixto",
+      "texto": "Además, no todas las normas procesales obligan igual: algunas admiten pacto en contrario, como la competencia territorial; otras son esenciales porque protegen la defensa. Y como anular hace retroceder el proceso y puede usarse para dilatarlo, la nulidad necesita principios que la limiten.",
+      "visual": "Ventana tuya. Dos candados: ABIERTO (pactables: competencia territorial, art. 25) y CERRADO (esenciales: protegen la defensa). Ficha «Art. IX TP». En «retroceder», la línea de tiempo rebobina con un reloj; en «dilatarlo», el reloj corre. En «principios», aparecen los 4 lentes.",
       "cues": [
         {
-          "id": "costo",
-          "ancla": "el proceso retrocede"
+          "id": "normas",
+          "ancla": "no todas las normas"
         },
         {
-          "id": "couture",
-          "ancla": "dice Couture"
+          "id": "pacto",
+          "ancla": "pacto en contrario"
         },
         {
-          "id": "perjuicios",
-          "ancla": "enmendar perjuicios"
+          "id": "esenciales",
+          "ancla": "otras son esenciales"
         },
         {
-          "id": "criterios",
-          "ancla": "criterios que las limiten"
+          "id": "retroceder",
+          "ancla": "retroceder el proceso"
+        },
+        {
+          "id": "dilatar",
+          "ancla": "dilatarlo"
+        },
+        {
+          "id": "principios",
+          "ancla": "principios que la limiten"
         }
       ],
-      "fundamento": "Arrarte §5: Monroy (la nulidad implica un retroceso en el iter procesal); los principios están destinados a autolimitar su utilización. Epígrafe de Couture.",
+      "fundamento": "Arrarte §4 in fine (CPC art. IX TP: imperatividad salvo regulación permisiva; p. ej., art. 25 competencia territorial; formas esenciales) y §5 (Monroy: retroceso; principios que autolimitan la nulidad).",
       "tarjeta": [
-        "anular cuesta: retrocede",
-        "Couture: pruritos vs. perjuicios",
-        "→ criterios que la limiten"
+        "no todas obligan igual",
+        "pactables (competencia territorial)",
+        "esenciales: protegen la defensa",
+        "anular retrocede/dilata → principios"
       ],
       "peldanos": [
         {
           "n": 6
         }
-      ],
-      "transicion": "Los criterios que limitan la nulidad son los cuatro principios."
+      ]
     },
     {
       "id": "principios",
-      "seccion": "Principios",
-      "layout": "panel",
-      "texto": "Arrarte los expone en cuatro principios que se aplican en conjunto, no como lista mecánica. Especificidad: ¿la ley sanciona el vicio? Convalidación: ¿se saneó o cumplió su finalidad? Trascendencia: ¿causó perjuicio real? Protección: ¿la pide quien lo provocó?",
-      "visual": "«El expediente bajo examen»: un expediente al centro y cuatro preguntas alrededor (2×2), unidas al expediente por líneas, sin flechas de secuencia. Cada pregunta se enciende al nombrarla, con su artículo: 171 · 172 · 174 · 175.1. Rótulo superior: «Pautas concatenadas: se aplican en conjunto».",
+      "seccion": "Los principios",
+      "layout": "mixto",
+      "texto": "Especificidad: la ley debe sancionar el vicio; aquí, el artículo 437. Convalidación: si el acto cumplió su finalidad, como en el primer escenario, queda convalidado. Trascendencia: debe haber un perjuicio real; en el segundo, Mario perdió la oportunidad de contestar y probar. Protección: no puede pedirla quien causó el vicio.",
+      "visual": "Pantalla partida con las dos versiones; debajo, los 4 principios. Cada uno se enciende en ambas columnas a la vez con su artículo. Versión 1 → verde (convalidado). Versión 2 → ámbar (puede proceder).",
       "cues": [
-        {
-          "id": "conjunto",
-          "ancla": "en conjunto"
-        },
         {
           "id": "p1",
           "ancla": "Especificidad"
+        },
+        {
+          "id": "a437",
+          "ancla": "artículo 437"
         },
         {
           "id": "p2",
           "ancla": "Convalidación"
         },
         {
+          "id": "primero",
+          "ancla": "primer escenario"
+        },
+        {
           "id": "p3",
           "ancla": "Trascendencia"
         },
         {
+          "id": "segundo",
+          "ancla": "en el segundo"
+        },
+        {
           "id": "p4",
           "ancla": "Protección"
+        },
+        {
+          "id": "causo",
+          "ancla": "quien causó"
         }
       ],
-      "fundamento": "Arrarte §5 (los principios están destinados a autolimitar su utilización) y §5.4 in fine («pautas concatenadas que solo son eficaces en su conjunto»). En el CPC: 171 (legalidad), 172 (convalidación), 174 (interés para pedir la nulidad), 175.1 (improcedencia).",
+      "fundamento": "CPC 171 (legalidad/especificidad), 437, 172 (convalidación), 174 (interés: perjuicio), 175.1 (protección). Arrarte §5: pautas concatenadas que se aplican en conjunto.",
       "tarjeta": [
-        "cuatro principios, en conjunto",
-        "especificidad · convalidación",
-        "trascendencia · protección"
+        "especificidad: la ley lo sanciona (437)",
+        "convalidación: escenario 1",
+        "trascendencia: escenario 2 perdió defensa",
+        "protección: no quien lo causó"
       ],
       "peldanos": [
         {
           "n": 7
         }
-      ],
-      "transicion": "Para comprobar que funcionan, se aplican al mismo vicio en dos escenarios."
-    },
-    {
-      "id": "casoA",
-      "seccion": "Caso A",
-      "layout": "panel",
-      "texto": "Pongámoslo a prueba. La demanda se notificó a un apoderado sin facultad para recibirla: el artículo 437 sanciona ese emplazamiento con nulidad. Pero el demandado se enteró y contestó a tiempo. El acto cumplió su finalidad: quedó convalidado. No se anula.",
-      "visual": "Rótulo «Caso A». Ficha del vicio: «Emplazamiento a apoderado sin facultad (arts. 436–437)». En el tablero de cuatro preguntas, Especificidad se enciende en ámbar («Sí: art. 437»). En «se presentó al proceso y contestó», Convalidación se enciende en verde («Cumplió su finalidad»). Cae el sello verde CONVALIDADO y aparece el veredicto «No se anula».",
-      "cues": [
-        {
-          "id": "vicio",
-          "ancla": "apoderado"
-        },
-        {
-          "id": "sancion",
-          "ancla": "artículo 437"
-        },
-        {
-          "id": "contesto",
-          "ancla": "contestó a tiempo"
-        },
-        {
-          "id": "sello",
-          "ancla": "quedó convalidado"
-        }
-      ],
-      "fundamento": "Ejemplo de la propia lectura (§5.2, b: notificación al apoderado; el demandado se apersona y contesta, por lo que el acto quedó convalidado al lograr su propósito). CPC 172, párrafos 1 y 2 (vicio en la notificación; convalidación por finalidad) y 437 in fine.",
-      "tarjeta": [
-        "apoderado sin facultad",
-        "437 lo sanciona",
-        "se enteró y contestó",
-        "finalidad → convalidado"
-      ],
-      "peldanos": [
-        {
-          "n": 7
-        }
-      ],
-      "transicion": "Si el mismo vicio sí causa indefensión, ¿cambia la respuesta?"
-    },
-    {
-      "id": "casoB",
-      "seccion": "Caso B",
-      "layout": "panel",
-      "texto": "Cambiemos un dato: el demandado nunca se enteró y el proceso siguió sin él. Pide la nulidad en su primera oportunidad, así que no hay convalidación. Precisa la defensa que perdió, como exige el artículo 174: contestar y probar. Y él no causó el vicio. Aquí sí puede proceder la nulidad, pero el acto vale hasta que el juez la declare.",
-      "visual": "Rótulo «Caso B: cambia un solo dato». Mismo tablero: Convalidación «No: pidió a tiempo (art. 176)», Trascendencia «Perdió: contestar y probar (art. 174)», Protección «No causó el vicio (art. 175.1)». «Puede proceder (requiere declaración judicial)». En «el acto vale», línea de tiempo con el emplazamiento marcado «VALE (PROVISIONALMENTE)». En «la declare», B-roll del sello en cámara lenta y el sello NULO cae sobre la tarjeta.",
-      "cues": [
-        {
-          "id": "datoB",
-          "ancla": "un dato"
-        },
-        {
-          "id": "noConvalida",
-          "ancla": "primera oportunidad"
-        },
-        {
-          "id": "perjuicio",
-          "ancla": "artículo 174"
-        },
-        {
-          "id": "proteccion",
-          "ancla": "no causó el vicio"
-        },
-        {
-          "id": "procede",
-          "ancla": "puede proceder"
-        },
-        {
-          "id": "provisional",
-          "ancla": "el acto vale"
-        },
-        {
-          "id": "declara",
-          "ancla": "la declare"
-        }
-      ],
-      "fundamento": "CPC 172 (convalidación tácita), 176 (primera oportunidad), 174 (interés: perjuicio y defensa perdida), 175.1 (improcedencia). Arrarte §6 d (validez provisional).",
-      "tarjeta": [
-        "nunca se enteró",
-        "1.ª oportunidad → no convalida",
-        "174: defensa perdida",
-        "no causó el vicio",
-        "vale hasta que el juez declare"
-      ],
-      "peldanos": [
-        {
-          "n": 7
-        }
-      ],
-      "transicion": "Una vez declarada, ¿hasta dónde llega la nulidad?"
-    },
-    {
-      "id": "consecuencias",
-      "seccion": "Efectos",
-      "layout": "panel",
-      "texto": "Y aun declarada, sus efectos son limitados: caen el emplazamiento y lo que dependía de él; la demanda queda en pie, artículo 173. Y es excepcional: en caso de duda, el proceso continúa.",
-      "visual": "Misma línea de tiempo: Emplazamiento, Rebeldía, Audiencia y Sentencia caen como dominó; la Demanda queda firme («▲ QUEDA EN PIE»). Ficha «Art. 173 · extensión». En «excepcional», rótulo «Excepcional · interpretación restringida: en duda, el proceso continúa».",
-      "cues": [
-        {
-          "id": "domino",
-          "ancla": "caen el emplazamiento"
-        },
-        {
-          "id": "enpie",
-          "ancla": "queda en pie"
-        },
-        {
-          "id": "a173",
-          "ancla": "artículo 173"
-        },
-        {
-          "id": "excepcional",
-          "ancla": "es excepcional"
-        }
-      ],
-      "fundamento": "CPC 173 (extensión: no alcanza a los anteriores ni a los posteriores independientes). Arrarte §6 a-c (excepcional, interpretación y aplicación restringidas).",
-      "tarjeta": [
-        "efectos limitados: dominó",
-        "la demanda queda en pie (173)",
-        "excepcional: en duda, continúa"
-      ],
-      "peldanos": [
-        {
-          "n": 8
-        }
-      ],
-      "transicion": "Con todo el razonamiento armado, ya se puede responder la pregunta inicial."
+      ]
     },
     {
       "id": "cierre",
-      "seccion": "Cierre",
-      "layout": "camara",
-      "texto": "Entonces, ¿basta un error para anular un juicio? No. Solo cuando deja a alguien sin defensa y no hay otra forma de remediarlo. Las formas sirven al debido proceso, no al revés. Como enseña Couture: la anulación por la anulación no vale.",
-      "visual": "Plano completo. La pregunta del título reaparece y se responde: «No.» (acercamiento de cámara), luego la condición. «Las formas sirven al debido proceso, no al revés». Cita final de Couture palabra por palabra. Tarjeta de fuentes.",
+      "seccion": "Consecuencias y cierre",
+      "layout": "mixto",
+      "texto": "Y aun así, el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa. Entonces, ¿un error puede anular un juicio? Solo cuando deja a alguien sin defensa. Como decía Couture: la anulación por la anulación no vale.",
+      "visual": "Versión 2: «VALE (PROVISIONALMENTE)»; B-roll del sello y el sello NULO; dominó: caen el emplazamiento y lo dependiente, la demanda de Rosa queda en pie (Art. 173, solo en pantalla). Luego tú a pantalla completa: la pregunta, «Solo cuando deja a alguien sin defensa» y Couture palabra por palabra.",
       "cues": [
         {
-          "id": "pregunta",
-          "ancla": "¿basta un error"
+          "id": "vale",
+          "ancla": "el acto vale"
         },
         {
-          "id": "no",
-          "ancla": "No. Solo"
+          "id": "declare",
+          "ancla": "juez declare"
+        },
+        {
+          "id": "duda",
+          "ancla": "en caso de duda"
+        },
+        {
+          "id": "pregunta",
+          "ancla": "¿un error puede"
         },
         {
           "id": "respuesta",
           "ancla": "Solo cuando"
         },
         {
-          "id": "formas",
-          "ancla": "Las formas sirven"
+          "id": "couture",
+          "ancla": "Como decía Couture"
         },
         {
           "id": "couture2",
           "ancla": "la anulación por la anulación"
         }
       ],
-      "fundamento": "Arrarte §5.3 (perjuicio cierto e irreparable que no pueda remediarse de otro modo; Couture: «La anulación por la anulación no vale») y §7.1 (las formas importan solo si protegen los principios del proceso).",
+      "fundamento": "Arrarte §6 (validez provisional; interpretación restringida: en duda, continuar) y §5.3 (Couture). CPC 173 (extensión: solo caen los actos dependientes), mostrado en pantalla.",
       "tarjeta": [
-        "¿basta un error? No",
-        "solo si deja sin defensa y no hay otro remedio",
-        "formas al servicio del debido proceso",
+        "vale hasta que el juez declare",
+        "en duda, continúa",
+        "¿un error puede anular? solo si deja sin defensa",
         "Couture"
       ],
       "peldanos": [
         {
           "n": 8
         }
-      ],
-      "transicion": "—"
+      ]
     }
   ],
   "creditos": {
     "duracionSeg": 4,
     "fuentes": [
       "Arrarte Arisnabarreta, Ana María. «Alcances sobre el tema de la nulidad procesal». Ius et Veritas, n.° 11.",
-      "Código Procesal Civil: arts. 171–176, 356, 436–437."
+      "Código Procesal Civil: arts. IX TP, 25, 171–176, 356, 436–437 · Código Civil: art. 140."
     ]
   },
   "escalera": [
     "Finalidad del proceso",
     "Aparición de vicios",
-    "Necesidad de la nulidad",
+    "Nulidad: medio impugnatorio",
     "Naturaleza y alcance",
-    "Las formas como garantía",
+    "La forma como garantía",
     "Necesidad de límites",
     "Principios en conjunto",
     "Consecuencias"
   ],
   "escaleraTabla": [
     {
-      "peldano": "—",
-      "escena": "gancho",
-      "fragmento": "¿Basta ese error para anularlo todo?",
-      "transicion": "Pregunta guía (no es peldaño): para responderla hay que empezar por la finalidad del proceso."
-    },
-    {
       "peldano": "1. Finalidad del proceso",
-      "escena": "proceso",
-      "fragmento": "El proceso existe para resolver conflictos respetando garantías: que ambas partes puedan defenderse.",
-      "transicion": "«Pero está hecho de actos…»: si el proceso avanza mediante actos, esos actos pueden fallar."
+      "escena": "finalidad",
+      "fragmento": "Todo proceso tiene una finalidad: resolver un conflicto respetando las garantías del debido proceso.",
+      "transicion": "«Pero el proceso avanza con actos…»: los actos pueden fallar."
     },
     {
       "peldano": "2. Aparición de vicios",
-      "escena": "proceso",
-      "fragmento": "esos actos pueden tener vicios.",
-      "transicion": "Un acto viciado amenaza las garantías del peldaño 1; hace falta una herramienta para atacarlo."
+      "escena": "finalidad",
+      "fragmento": "esos actos pueden tener defectos.",
+      "transicion": "Un defecto amenaza las garantías, así que hace falta una herramienta."
     },
     {
       "peldano": "3. Necesidad de la nulidad",
-      "escena": "proceso",
-      "fragmento": "Para cuestionarlos existe la nulidad.",
-      "transicion": "Si existe una herramienta, hay que precisar qué clase de herramienta es y qué vicios ataca."
+      "escena": "finalidad",
+      "fragmento": "Para cuestionarlos existe la nulidad procesal",
+      "transicion": "Se define y de inmediato se prueba con un caso."
     },
     {
-      "peldano": "4. Naturaleza y alcance",
-      "escena": "concepto",
-      "fragmento": "Es un medio impugnatorio: recurso, si el acto viciado está en una resolución; remedio, si no lo está",
-      "transicion": "La forma es el foco principal de los vicios, así que surge la pregunta: ¿para qué existe la forma?"
+      "peldano": "Caso",
+      "escena": "caso",
+      "fragmento": "¿Prosperaría una nulidad? No: el acto cumplió su finalidad y no hubo un perjuicio efectivo.",
+      "transicion": "Deja la intriga (¿por qué no?) y obliga a precisar qué se cuestiona."
     },
     {
-      "peldano": "5. Las formas como garantía",
-      "escena": "formas",
-      "fragmento": "No son un fin en sí mismas: son garantías del derecho de defensa",
-      "transicion": "Si la forma solo protege la defensa, anular cuando nadie quedó indefenso no tiene sentido («¿qué sentido tendría anular?»)."
+      "peldano": "4a. Naturaleza: recurso/remedio",
+      "escena": "remedio",
+      "fragmento": "una notificación no está contenida en una resolución judicial, así que aquí la nulidad funciona como remedio.",
+      "transicion": "Saber qué se cuestiona lleva a preguntar dónde está el defecto."
+    },
+    {
+      "peldano": "4b. Alcance: elementos y vicios",
+      "escena": "elementos",
+      "fragmento": "Si falla la forma, el vicio es extrínseco; si falla otro elemento, intrínseco. El nuestro es extrínseco.",
+      "transicion": "El vicio del caso es de forma, así que surge la pregunta: ¿para qué existe la forma?"
+    },
+    {
+      "peldano": "5. La forma como garantía",
+      "escena": "forma",
+      "fragmento": "la forma no es un fin en sí misma, es una garantía de defensa.",
+      "transicion": "«Cambiemos un dato»: el mismo defecto con o sin indefensión."
     },
     {
       "peldano": "6. Necesidad de límites",
       "escena": "limites",
-      "fragmento": "Además, anular cuesta: el proceso retrocede.",
-      "transicion": "Anular sin indefensión no sirve (peldaño 5) y además retrasa el proceso (peldaño 6): «Hacen falta criterios que las limiten»."
+      "fragmento": "como anular hace retroceder el proceso y puede usarse para dilatarlo, la nulidad necesita principios que la limiten.",
+      "transicion": "Los principios que la limitan se aplican al caso."
     },
     {
       "peldano": "7. Principios en conjunto",
       "escena": "principios",
-      "fragmento": "Arrarte los expone en cuatro principios que se aplican en conjunto, no como lista mecánica.",
-      "transicion": "«Pongámoslo a prueba»: los mismos criterios, aplicados al mismo vicio en dos escenarios."
-    },
-    {
-      "peldano": "7 · demostración A",
-      "escena": "casoA",
-      "fragmento": "El acto cumplió su finalidad: quedó convalidado. No se anula.",
-      "transicion": "«Cambiemos un dato»: si el mismo vicio sí causa indefensión, ¿cambia la respuesta?"
-    },
-    {
-      "peldano": "7 · demostración B",
-      "escena": "casoB",
-      "fragmento": "Aquí sí puede proceder la nulidad, pero el acto vale hasta que el juez la declare.",
-      "transicion": "Una vez declarada, ¿hasta dónde llega la nulidad?"
+      "fragmento": "Especificidad: la ley debe sancionar el vicio",
+      "transicion": "Separan las dos versiones; falta saber qué efectos tiene la nulidad."
     },
     {
       "peldano": "8. Consecuencias",
-      "escena": "consecuencias",
-      "fragmento": "Y aun declarada, sus efectos son limitados",
-      "transicion": "Con todo el razonamiento armado, se responde la pregunta guía."
+      "escena": "cierre",
+      "fragmento": "el acto vale hasta que el juez declare la nulidad, y en caso de duda, el proceso continúa.",
+      "transicion": "Se responde la pregunta del título."
     },
     {
       "peldano": "Conclusión",
       "escena": "cierre",
-      "fragmento": "Solo cuando deja a alguien sin defensa y no hay otra forma de remediarlo. Las formas sirven al debido proceso, no al revés.",
-      "transicion": "Cierra el círculo con la pregunta del título."
+      "fragmento": "Solo cuando deja a alguien sin defensa.",
+      "transicion": "Cierra el círculo con Couture."
     }
   ]
 }

@@ -131,4 +131,6 @@ Graba 2 o 3 tomas de cada una, empezando con «escena X, toma Y» y una palmada.
 ## Riesgos y cómo los cubro
 - **Tiempo:** los personajes y las escenas nuevas me toman unas 4 a 6 horas, en paralelo mientras grabas. Si algo no llega, la **v2 y el respaldo siguen intactos** y funcionan con tus mismas tomas.
 - **Que se vea infantil:** pictogramas sobrios (estilo Isotype), sin caras ni expresiones, con la misma paleta de papel y tinta. Ver `docs/estilo-personajes-1.png` y `-2.png`.
+
+> **Nota:** el guion final es el v4 (estructura de Augusto, en `GUION.md`); esta propuesta v3 quedó como antecedente del storyboard.
 - **Que pase de 2:55:** el script final no exporta nada que supere ese límite.

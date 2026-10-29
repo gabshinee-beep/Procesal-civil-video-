@@ -6,18 +6,16 @@ import { ventana } from "../anim";
 
 // Versión de respaldo: rótulos inferiores sobrios con autores y normas, sin animaciones complejas.
 const ROTULOS: [string, string, string, string][] = [
-  ["proceso", "garantias", "PELDAÑO 1 · FINALIDAD DEL PROCESO", "Resolver conflictos respetando garantías"],
-  ["proceso", "nulidad", "PELDAÑOS 2–3", "Los actos pueden tener vicios → existe la nulidad"],
-  ["concepto", "recurso", "PELDAÑO 4 · ART. 356 CPC", "Recurso: acto en resolución · Remedio: acto fuera de ella"],
-  ["concepto", "vicios", "BERIZONCE, CIT. POR ARRARTE", "Vicios extrínsecos (forma) e intrínsecos (contenido)"],
-  ["formas", "garantias", "PELDAÑO 5 · CALAMANDREI", "Las formas no son fines: son garantías"],
-  ["limites", "couture", "PELDAÑO 6 · EDUARDO COUTURE", "«No satisfacer pruritos formales, sino enmendar perjuicios efectivos»"],
-  ["principios", "p1", "PELDAÑO 7 · PRINCIPIOS (ARRARTE)", "Especificidad · Convalidación · Trascendencia · Protección"],
-  ["casoA", "sancion", "ART. 437 CPC", "Nulidad del emplazamiento defectuoso"],
-  ["casoA", "sello", "ARTS. 172 Y 437 CPC", "Convalidado: el acto cumplió su finalidad"],
-  ["casoB", "perjuicio", "ART. 174 CPC", "Interés: acreditar el perjuicio y la defensa perdida"],
-  ["casoB", "proteccion", "ART. 175.1 CPC", "Improcedente si lo pide quien causó el vicio"],
-  ["consecuencias", "a173", "PELDAÑO 8 · ART. 173 CPC", "Extensión: caen solo los actos dependientes"],
+  ["finalidad", "garantias", "PELDAÑO 1 · FINALIDAD DEL PROCESO", "Resolver conflictos respetando el debido proceso"],
+  ["finalidad", "impugnatorio", "NULIDAD PROCESAL (ARRARTE)", "Medio impugnatorio: validez o eficacia de un acto o del proceso"],
+  ["caso", "facultad", "ARTS. 436–437 CPC", "Notificación a un apoderado sin facultad"],
+  ["caso", "finalidad", "SIN NULIDAD", "El acto cumplió su finalidad y no hubo perjuicio efectivo"],
+  ["remedio", "remedio", "ART. 356 CPC", "Recurso: acto en resolución · Remedio: acto fuera de ella"],
+  ["elementos", "acto", "ART. 140 CC · BERIZONCE", "Capacidad, objeto, finalidad y forma · vicios extrínsecos e intrínsecos"],
+  ["forma", "garantia", "CALAMANDREI · MORELLO", "La forma no es un fin: es garantía de defensa"],
+  ["limites", "pacto", "ART. IX TP CPC", "Imperatividad: no todas las normas procesales obligan igual"],
+  ["principios", "p1", "ARTS. 171, 172, 174, 175.1 CPC", "Especificidad · Convalidación · Trascendencia · Protección"],
+  ["cierre", "vale", "VALIDEZ PROVISIONAL · ART. 173", "Vale hasta que el juez declare; solo caen los actos dependientes"],
   ["cierre", "couture2", "EDUARDO COUTURE", "«La anulación por la anulación no vale»"],
 ];
 

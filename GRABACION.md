@@ -6,7 +6,7 @@
 ## 0. Antes de nada
 - **Dormir.** Una cara trasnochada se nota más que cualquier efecto.
 - Comprar: **micrófono de solapa USB-C con cable de 2 m o más**, **trípode para celular** y **audífonos USB-C**. Para salir de dudas, ver la respuesta del chat.
-- Ensayar 3 veces con las **tarjetas** de `GUION.md` y cronometrar. Si pasas de 2:50, avísame y recortamos.
+- Ensayar 3 veces con las **tarjetas** de `GUION.md` (guion v4) y cronometrar. Si pasas de 2:50, recorta en este orden: (1) «como la competencia territorial», (2) «El nuestro es extrínseco», (3) «y puede usarse para dilatarlo», (4) «o de todo el proceso».
 
 ## 1. Set (15 min)
 - **Luz:** ventana de frente o en diagonal, nunca a tu espalda. Si es de noche, lámpara cálida rebotada en una pared blanca frente a ti.
@@ -32,15 +32,18 @@ Graba **escena por escena**, en orden, con **2 o 3 tomas** cada una. Antes de ca
 2. Mira la tarjeta y respira 2 segundos.
 3. Mira al lente (no a la pantalla) y explica. Si te equivocas, **no cortes**: haz una pausa y repite la frase. Yo elijo la buena.
 
-| # | Escena | Duración aprox. |
-|---|---|---|
-| 1 | Gancho | 13 s |
-| 2 | Qué es | 25 s |
-| 3 | El problema | 20 s |
-| 4 | Principios | 22 s |
-| 5 | Caso A | 25 s |
-| 6 | Caso B | 38 s |
-| 7 | Cierre | 18 s |
+**Guion v4** (8 escenas, ver `GUION.md`). Encuadre único para todas: plano medio, **tú un poco a la izquierda del centro** y con aire sobre la cabeza. Yo te recorto en ventana o círculo según la escena.
+
+| # | Escena | Duración aprox. | Indicación |
+|---|---|---|---|
+| 1 | Finalidad | 22 s | Abres tú, mirando al lente: "Todo proceso tiene una finalidad…" |
+| 2 | El caso | 19 s | Tono de narrador ("Rosa demanda a Mario"); en "¿Prosperaría…?" haz una pausa; el "No" firme |
+| 3 | ¿Recurso o remedio? | 14 s | Pausado, didáctico |
+| 4 | Elementos y vicios | 17 s | Puedes contar con los dedos: capacidad, objeto, finalidad, forma |
+| 5 | La forma como garantía | 22 s | "Y esta es la clave" con énfasis; en "cambiemos un dato", gesto con la mano |
+| 6 | Necesidad de límites | 17 s | Contraste: "algunas… otras…" |
+| 7 | Los principios | 20 s | Cuenta 1, 2, 3, 4 con los dedos |
+| 8 | Consecuencias y cierre | 18 s | Mira al lente; pausa antes de "Solo cuando…" |
 
 **Energía:** un 20 % más de lo que te parece natural. En cámara, lo "normal" se ve apagado.
 

@@ -4,7 +4,7 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 
 const guion = JSON.parse(readFileSync("src/data/guion.json", "utf8"));
-const WPM = Number(process.env.WPM ?? 195);
+const WPM = Number(process.env.WPM ?? 180);
 const PAUSA = 0.45; // segundos entre escenas
 const tmp = "out/voz";
 mkdirSync(tmp, { recursive: true });

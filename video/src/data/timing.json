@@ -1,67 +1,55 @@
 {
   "fuente": "voz-provisional",
-  "wpm": 195,
-  "total": 171.083,
+  "wpm": 180,
+  "total": 170.563,
   "escenas": [
     {
-      "id": "gancho",
+      "id": "finalidad",
       "inicio": 0,
-      "duracion": 12.816,
-      "nPalabras": 33
+      "duracion": 24.694,
+      "nPalabras": 55
     },
     {
-      "id": "proceso",
-      "inicio": 13.266,
-      "duracion": 16.194,
-      "nPalabras": 34
+      "id": "caso",
+      "inicio": 25.144,
+      "duracion": 19.426,
+      "nPalabras": 48
     },
     {
-      "id": "concepto",
-      "inicio": 29.91,
-      "duracion": 16.552,
-      "nPalabras": 39
+      "id": "remedio",
+      "inicio": 45.021,
+      "duracion": 16.045,
+      "nPalabras": 36
     },
     {
-      "id": "formas",
-      "inicio": 46.912,
-      "duracion": 14.75,
-      "nPalabras": 37
+      "id": "elementos",
+      "inicio": 61.516,
+      "duracion": 19.769,
+      "nPalabras": 42
+    },
+    {
+      "id": "forma",
+      "inicio": 81.735,
+      "duracion": 19.577,
+      "nPalabras": 54
     },
     {
       "id": "limites",
-      "inicio": 62.112,
-      "duracion": 14.175,
-      "nPalabras": 29
+      "inicio": 101.762,
+      "duracion": 20.167,
+      "nPalabras": 43
     },
     {
       "id": "principios",
-      "inicio": 76.736,
-      "duracion": 17.575,
-      "nPalabras": 38
-    },
-    {
-      "id": "casoA",
-      "inicio": 94.761,
-      "duracion": 18.168,
-      "nPalabras": 41
-    },
-    {
-      "id": "casoB",
-      "inicio": 113.379,
-      "duracion": 23.062,
-      "nPalabras": 61
-    },
-    {
-      "id": "consecuencias",
-      "inicio": 136.891,
-      "duracion": 13.641,
-      "nPalabras": 33
+      "inicio": 122.379,
+      "duracion": 25.601,
+      "nPalabras": 50
     },
     {
       "id": "cierre",
-      "inicio": 150.983,
-      "duracion": 15.65,
-      "nPalabras": 42
+      "inicio": 148.43,
+      "duracion": 17.683,
+      "nPalabras": 45
     }
   ]
 }
