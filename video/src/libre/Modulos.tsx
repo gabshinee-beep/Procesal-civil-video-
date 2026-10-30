@@ -8,7 +8,7 @@ import { useManos } from "./manos";
 import { C, mono, sans, serif } from "../theme";
 import { entra, lerp, ventana } from "../anim";
 
-type Seg = { id: string; cues: { id: string }[]; rotulos?: { cue: string; kicker: string; texto: string; hasta?: string }[]; nombres?: { demandante?: string; demandado?: string } };
+type Seg = { id: string; pregunta?: { n: number; texto: string }; cues: { id: string }[]; rotulos?: { cue: string; kicker: string; texto: string; hasta?: string }[]; nombres?: { demandante?: string; demandado?: string } };
 const seg = (id: string) => escenas.find((e) => e.id === id) as unknown as Seg;
 const tieneCue = (id: string, c: string) => seg(id).cues.some((x) => x.id === c);
 
@@ -36,10 +36,31 @@ const Rotulos: React.FC<{ id: string }> = ({ id }) => {
   );
 };
 
-// Tú a pantalla completa, con rótulos opcionales. Es el módulo «comodín» de la explicación libre.
+// Tu pregunta, en grande y DETRÁS de ti (como portada de revista). Va entre tu cuarto y tu recorte.
+export const PreguntaDetras: React.FC<{ id: string; hasta?: number }> = ({ id, hasta }) => {
+  const frame = useCurrentFrame();
+  const q = seg(id).pregunta;
+  if (!q) return null;
+  const at = escenas[0].id === id ? 112 : 4;
+  const fin = Math.min(at + 120, hasta ?? Infinity);
+  const o = Math.min(entra(frame, at, 18), 1 - entra(frame, fin - 10, 14));
+  if (o <= 0.001) return null;
+  return (
+    <div style={{ position: "absolute", left: 80, right: 80, top: 90, opacity: o, transform: `translateY(${(1 - o) * 30}px)` }}>
+      <div style={{ fontFamily: mono, fontSize: 26, letterSpacing: 8, color: C.ambar }}>PREGUNTA {q.n}</div>
+      <div style={{ fontFamily: serif, fontWeight: 700, fontSize: 112, lineHeight: 0.98, letterSpacing: -2, color: C.papel, textShadow: "0 8px 30px rgba(0,0,0,0.35)" }}>{q.texto}</div>
+    </div>
+  );
+};
+
+const conRecorte = (id: string) => !!(tomaDe(id) as { persona?: string } | null)?.persona;
+
+// Tú a pantalla completa, con tu pregunta detrás y rótulos opcionales. Módulo «comodín».
 export const Presentador: React.FC<{ id?: string }> = ({ id = "" }) => (
   <AbsoluteFill>
     <Camara escenaId={id} etiqueta="Presentador" />
+    {conRecorte(id) && <PreguntaDetras id={id} />}
+    <Camara escenaId={id} etiqueta="Presentador" capa="persona" />
     <Rotulos id={id} />
   </AbsoluteFill>
 );
@@ -60,6 +81,7 @@ export const NulidadDetras: React.FC<{ id?: string }> = ({ id = "" }) => {
   return (
     <AbsoluteFill>
       <Camara escenaId={id} etiqueta="Nulidad" zoom={[1, 1.03]} />
+      {detras && <PreguntaDetras id={id} hasta={at} />}
       {detras ? texto : <AbsoluteFill style={{ background: "linear-gradient(to right, transparent 45%, rgba(10,9,8,0.6) 70%)", opacity: p }}>{texto}</AbsoluteFill>}
       <Camara escenaId={id} etiqueta="Nulidad" zoom={[1, 1.03]} capa="persona" />
       <Rotulos id={id} />
