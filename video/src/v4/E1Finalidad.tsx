@@ -9,9 +9,9 @@ import { entra } from "../anim";
 
 // Peldaños 1–3: abres tú a pantalla completa con la finalidad del proceso; luego los actos,
 // el defecto y la nulidad como herramienta (ficha de glosario).
-export const E1Finalidad: React.FC = () => {
+export const E1Finalidad: React.FC<{ id?: string }> = ({ id = "finalidad" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("finalidad");
+  const c = useCues(id);
   const escenario = c("actos") - 6;
   return (
     <AbsoluteFill style={{ background: C.noche }}>
@@ -32,7 +32,7 @@ export const E1Finalidad: React.FC = () => {
           />
         </Escenario>
       )}
-      <Encuadre escenaId="finalidad" etiqueta="Finalidad" pasos={[{ at: 0, modo: "completo" }, { at: escenario, modo: "pip" }]} />
+      <Encuadre escenaId={id} etiqueta="Finalidad" pasos={[{ at: 0, modo: "completo" }, { at: escenario, modo: "pip" }]} />
       {frame < escenario + 10 && (
         <AbsoluteFill style={{ opacity: 1 - entra(frame, escenario - 6, 10) }}>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 40%, rgba(10,9,8,0.7) 64%)", opacity: entra(frame, c("conflicto") - 6, 12) }} />

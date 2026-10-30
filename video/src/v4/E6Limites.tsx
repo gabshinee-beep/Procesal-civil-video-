@@ -9,9 +9,9 @@ import { C, mono, sans, serif } from "../theme";
 import { entra, ventana } from "../anim";
 
 // Peldaño 6: no todas las normas obligan igual (imperatividad) + anular retrocede/dilata → principios.
-export const E6Limites: React.FC = () => {
+export const E6Limites: React.FC<{ id?: string }> = ({ id = "limites" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("limites");
+  const c = useCues(id);
   const fase1 = ventana(frame, 0, c("retroceder") - 4);
   const fase2 = entra(frame, c("retroceder") - 4, 16);
   return (
@@ -55,7 +55,7 @@ export const E6Limites: React.FC = () => {
           </Aparece>
         </div>
       </Escenario>
-      <Encuadre escenaId="limites" etiqueta="Necesidad de límites" pasos={[{ at: 0, modo: "ventana" }]} />
+      <Encuadre escenaId={id} etiqueta="Necesidad de límites" pasos={[{ at: 0, modo: "ventana" }]} />
     </AbsoluteFill>
   );
 };

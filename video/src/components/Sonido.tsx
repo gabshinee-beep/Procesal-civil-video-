@@ -2,46 +2,52 @@ import React from "react";
 import { Audio, Sequence, staticFile } from "remotion";
 import audio from "../data/audio.json";
 import { finBRoll } from "./BRoll";
-import { cue, inicioEscena, inicioCreditos, duracionTotal } from "../tiempos";
+import { cue, escenas, inicioEscena, inicioCreditos, duracionTotal } from "../tiempos";
 
 type Ev = { at: number; sfx: string; vol?: number };
 
-// Diseño sonoro: cada efecto está anclado a un momento del razonamiento, nunca de adorno.
+// Diseño sonoro por tipo de escena (módulo): cada efecto acompaña un momento del razonamiento.
+const tiene = (id: string, c: string) => (escenas.find((e) => e.id === id)?.cues ?? []).some((x) => x.id === c);
+const porModulo = (id: string, modulo: string): Ev[] => {
+  const g = (c: string, d = 0): number | null => (tiene(id, c) ? inicioEscena(id) + cue(id, c) + d : null);
+  const ev = (c: string, sfx: string, vol?: number, d = 0): Ev[] => {
+    const at = g(c, d);
+    return at === null ? [] : [{ at, sfx, vol }];
+  };
+  const inicio: Ev[] = [{ at: inicioEscena(id), sfx: "papel", vol: 0.5 }];
+  switch (modulo) {
+    case "finalidad":
+      return [...ev("conflicto", "tic", 0.6), ...ev("actos", "papel", 0.7, -6), ...ev("defectos", "grieta"), ...ev("nulidad", "tic-grave")];
+    case "nulidadDetras":
+      return [...ev("nulidad", "golpe", 0.7)];
+    case "partesEnManos":
+      return [...ev("demandante", "tic"), ...ev("demandado", "tic")];
+    case "caso":
+      return [...inicio, ...ev("facultad", "tic-grave"), ...ev("contesta", "papel", 0.5), ...ev("no", "golpe", 0.5)];
+    case "remedio":
+      return [...inicio, ...ev("remedio", "sello", 0.5, 8), ...ev("recurso", "sello", 0.5, 8)];
+    case "elementos":
+      return [...inicio, ...ev("forma", "grieta", 0.8), ...ev("intrinseco", "tic-grave")];
+    case "forma":
+      return [...ev("dato", "rebobinar", 0.5, -4)];
+    case "limites":
+      return [...inicio, ...ev("pacto", "tic"), ...ev("esenciales", "tic-grave"), ...ev("retroceder", "rebobinar", 0.6, 6)];
+    case "principios":
+    case "principiosPartes":
+      return [...inicio, ...["p1", "p2", "p3", "p4"].flatMap((c) => ev(c, "tic-grave", 0.8))];
+    case "cierre": {
+      const s = tiene(id, "declare") ? inicioEscena(id) + finBRoll("sello", cue(id, "declare")) : null;
+      return s === null ? [] : [{ at: s, sfx: "sello" }, ...[0, 1, 2, 3].map((i) => ({ at: s + 14 + i * 6, sfx: "domino", vol: 0.8 }))];
+    }
+    default:
+      return [];
+  }
+};
+
 const eventos = (modo: "completo" | "respaldo"): Ev[] => {
-  const g = (esc: string, c: string, d = 0) => inicioEscena(esc) + cue(esc, c) + d;
-  const base: Ev[] = [
-    { at: 2, sfx: "golpe", vol: 0.6 },
-    { at: inicioCreditos(), sfx: "papel" },
-  ];
+  const base: Ev[] = [{ at: 2, sfx: "golpe", vol: 0.6 }, { at: inicioCreditos(), sfx: "papel" }];
   if (modo === "respaldo") return base;
-  return [
-    ...base,
-    { at: g("finalidad", "conflicto"), sfx: "tic", vol: 0.6 },
-    { at: g("finalidad", "actos", -6), sfx: "papel", vol: 0.7 },
-    { at: g("caso", "laura"), sfx: "tic" },
-    { at: g("caso", "laura", 10), sfx: "tic" },
-    ...[0, 1, 2, 3, 4].map((i) => ({ at: g("finalidad", "actos", 4 + i * 8), sfx: "tic", vol: 0.5 })),
-    { at: g("finalidad", "defectos"), sfx: "grieta" },
-    { at: g("finalidad", "nulidad"), sfx: "tic-grave" },
-    { at: inicioEscena("caso") + Math.max(cue("caso", "apoderado"), finBRoll("sobre")), sfx: "papel", vol: 0.6 },
-    { at: g("caso", "facultad"), sfx: "tic-grave" },
-    { at: g("caso", "contesta"), sfx: "papel", vol: 0.5 },
-    { at: g("caso", "no"), sfx: "golpe", vol: 0.5 },
-    { at: inicioEscena("remedio"), sfx: "papel", vol: 0.6 },
-    { at: g("remedio", "remedio", 8), sfx: "sello", vol: 0.5 },
-    { at: g("remedio", "recurso", 8), sfx: "sello", vol: 0.5 },
-    { at: inicioEscena("elementos"), sfx: "papel", vol: 0.6 },
-    { at: g("elementos", "forma"), sfx: "grieta", vol: 0.8 },
-    { at: g("elementos", "intrinseco"), sfx: "tic-grave" },
-    { at: g("forma", "dato", -4), sfx: "rebobinar", vol: 0.5 },
-    { at: inicioEscena("limites"), sfx: "papel", vol: 0.6 },
-    { at: g("limites", "pacto"), sfx: "tic" },
-    { at: g("limites", "esenciales"), sfx: "tic-grave" },
-    { at: g("limites", "retroceder", 6), sfx: "rebobinar", vol: 0.6 },
-    ...["p1", "p2", "p3", "p4"].map((c) => ({ at: g("principios", c), sfx: "tic-grave", vol: 0.8 })),
-    { at: inicioEscena("cierre") + finBRoll("sello"), sfx: "sello" },
-    ...[0, 1, 2, 3].map((i) => ({ at: inicioEscena("cierre") + finBRoll("sello") + 14 + i * 6, sfx: "domino", vol: 0.8 })),
-  ];
+  return [...base, ...escenas.flatMap((e) => porModulo(e.id, (e as { modulo?: string }).modulo ?? e.id))];
 };
 
 export const Sonido: React.FC<{ modo: "completo" | "respaldo" }> = ({ modo }) => (

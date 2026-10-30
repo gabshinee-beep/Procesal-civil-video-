@@ -7,9 +7,9 @@ import { C, sans, serif } from "../theme";
 import { entra } from "../anim";
 
 // Peldaño 5 (el corazón): la forma es garantía, no fin → el mismo defecto se bifurca.
-export const E5Forma: React.FC = () => {
+export const E5Forma: React.FC<{ id?: string }> = ({ id = "forma" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("forma");
+  const c = useCues(id);
   const split = c("dato") - 4;
   return (
     <AbsoluteFill style={{ background: C.noche }}>
@@ -17,7 +17,7 @@ export const E5Forma: React.FC = () => {
         <Versiones v1={{ aparece: split, titulo: "Mario se entera y contesta" }} v2={{ aparece: c("nunca") - 8, titulo: "Mario nunca se entera", sinDefensa: c("sindefensa") }} />
       )}
       <Encuadre
-        escenaId="forma"
+        escenaId={id}
         etiqueta="La forma como garantía"
         pasos={[{ at: 0, modo: "completo" }, { at: split, modo: "centro" }]}
         golpes={[{ at: c("clave"), escala: 1.08 }]}

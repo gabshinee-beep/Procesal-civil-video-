@@ -9,9 +9,9 @@ import { C, mono, sans, serif } from "../theme";
 import { entra, rango } from "../anim";
 
 // El caso: la notificación extraviada. Mario se entera y contesta → no prosperaría la nulidad.
-export const E2Caso: React.FC = () => {
+export const E2Caso: React.FC<{ id?: string }> = ({ id = "caso" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("caso");
+  const c = useCues(id);
   const sale = Math.max(c("apoderado"), finBRoll("sobre"));
   const t1 = rango(frame, sale, sale + 26);
   const [sx, sy] = frame < c("entera") ? bezier([830, 370], [1260, 380], [1470, 470], t1) : bezier([1470, 470], [1300, 420], [1110, 470], rango(frame, c("entera"), c("entera") + 22));
@@ -41,7 +41,7 @@ export const E2Caso: React.FC = () => {
           <span style={{ fontFamily: sans, fontWeight: 600, fontSize: 22, color: C.ambar }}>Mario se entera</span>
         </Aparece>
       </Escenario>
-      <Encuadre escenaId="caso" etiqueta="El caso" pasos={[{ at: 0, modo: "pip" }, { at: c("pregunta") - 6, modo: "completo" }]} golpes={[{ at: c("no"), escala: 1.08 }]} />
+      <Encuadre escenaId={id} etiqueta="El caso" pasos={[{ at: 0, modo: "pip" }, { at: c("pregunta") - 6, modo: "completo" }]} golpes={[{ at: c("no"), escala: 1.08 }]} />
       {/* el texto de la respuesta va por encima de tu plano */}
       <AbsoluteFill style={{ opacity: frame >= c("pregunta") ? 1 : 0, pointerEvents: "none" }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 40%, rgba(10,9,8,0.7) 64%)", opacity: entra(frame, c("pregunta"), 14) }} />

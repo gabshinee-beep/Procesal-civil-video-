@@ -1,6 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
-import { cue, f, inicioEscena } from "../tiempos";
+import { cue, escenas, f, inicioEscena } from "../tiempos";
 import { C, mono, sans } from "../theme";
 import { ventana } from "../anim";
 
@@ -23,7 +23,7 @@ export const Rotulos: React.FC = () => {
   const frame = useCurrentFrame();
   return (
     <>
-      {ROTULOS.map(([esc, cueId, kicker, texto]) => {
+      {ROTULOS.filter(([esc, cueId]) => escenas.some((e) => e.id === esc && e.cues.some((c) => c.id === cueId))).map(([esc, cueId, kicker, texto]) => {
         const at = inicioEscena(esc) + cue(esc, cueId);
         const o = ventana(frame, at, at + f(4.2));
         if (o <= 0) return null;

@@ -3,7 +3,7 @@ import timingJson from "./data/timing.json";
 
 export type Palabra = { w: string; s: number; e: number };
 type TiempoEscena = { id: string; inicio: number; duracion: number; nPalabras?: number; cues?: Record<string, number>; palabras?: Palabra[] };
-export const timing = timingJson as { fuente: string; total: number; escenas: TiempoEscena[] };
+export const timing = timingJson as unknown as { fuente: string; total: number; escenas: TiempoEscena[] };
 import { FPS } from "./theme";
 
 export type Escena = (typeof guion.escenas)[number];

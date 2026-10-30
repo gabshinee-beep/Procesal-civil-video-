@@ -17,11 +17,24 @@ import { E5Forma } from "./v4/E5Forma";
 import { E6Limites } from "./v4/E6Limites";
 import { E7Principios } from "./v4/E7Principios";
 import { E8Cierre } from "./v4/E8Cierre";
-import { escenas, inicioEscena, duracionEscena, inicioCreditos, cue } from "./tiempos";
+import { escenas, inicioEscena, duracionEscena, inicioCreditos, cue, f } from "./tiempos";
+import { Presentador, NulidadDetras, PartesEnManos } from "./libre/Modulos";
+import { PrincipiosPartes } from "./libre/PrincipiosPartes";
+
+// La escalera aparece desde el primer peldaño 2 en adelante y se oculta en la conclusión.
+const inicioEscalera = () => {
+  const e = escenas.find((x) => (x.peldanos as { n: number }[]).some((p) => p.n >= 2));
+  return e ? inicioEscena(e.id) : 0;
+};
+const finEscalera = () => {
+  const ult = escenas[escenas.length - 1];
+  const tieneP = ult.cues.some((c) => c.id === "pregunta");
+  return tieneP ? inicioEscena(ult.id) + cue(ult.id, "pregunta") - 6 : inicioEscena(ult.id) + duracionEscena(ult.id);
+};
 import { C, mono, serif } from "./theme";
 import { entra, sale } from "./anim";
 
-const COMPLETO: Record<string, React.FC> = {
+const COMPLETO: Record<string, React.FC<{ id?: string }>> = {
   finalidad: E1Finalidad,
   caso: E2Caso,
   remedio: E3Remedio,
@@ -30,6 +43,10 @@ const COMPLETO: Record<string, React.FC> = {
   limites: E6Limites,
   principios: E7Principios,
   cierre: E8Cierre,
+  presentador: Presentador,
+  nulidadDetras: NulidadDetras,
+  partesEnManos: PartesEnManos,
+  principiosPartes: PrincipiosPartes,
 };
 
 const sinGrabacion = escenas.every((e) => (tomas as Record<string, unknown>)[e.id] == null);
@@ -51,19 +68,18 @@ const TituloCine: React.FC<{ hasta: number }> = ({ hasta }) => {
 export const Video: React.FC<{ modo: "completo" | "respaldo" }> = ({ modo }) => (
   <AbsoluteFill style={{ background: C.noche }}>
     {escenas.map((e) => {
-      const Escena = COMPLETO[e.id];
+      const modulo = (e as { modulo?: string }).modulo ?? e.id;
+      const Escena = COMPLETO[modulo] ?? Presentador;
       return (
         <Sequence key={e.id} from={inicioEscena(e.id)} durationInFrames={duracionEscena(e.id)} name={e.seccion}>
-          {modo === "completo" ? <Escena /> : <Camara escenaId={e.id} etiqueta={e.seccion} />}
+          {modo === "completo" ? <Escena id={e.id} /> : <Camara escenaId={e.id} etiqueta={e.seccion} />}
         </Sequence>
       );
     })}
     {modo === "respaldo" && <Rotulos />}
-    {modo === "completo" && (
-      <Escalera visibleDesde={inicioEscena("finalidad") + cue("finalidad", "actos") - 6} visibleHasta={inicioEscena("cierre") + cue("cierre", "pregunta") - 6} />
-    )}
+    {modo === "completo" && <Escalera visibleDesde={inicioEscalera()} visibleHasta={finEscalera()} />}
     <BRoll />
-    <TituloCine hasta={inicioEscena("finalidad") + finBRoll("expediente")} />
+    <TituloCine hasta={escenas.length ? inicioEscena(escenas[0].id) + finBRoll("expediente", f(3.2)) : 0} />
     <Subtitulos />
     <Creditos at={inicioCreditos()} />
     <Sonido modo={modo} />

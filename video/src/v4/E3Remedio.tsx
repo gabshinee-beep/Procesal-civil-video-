@@ -19,9 +19,9 @@ const Bandeja: React.FC<{ x: number; titulo: string; sub: string; ej: string; ac
 };
 
 // Peldaño 4a: ¿recurso o remedio? Depende de QUÉ acto se cuestiona (art. 356).
-export const E3Remedio: React.FC = () => {
+export const E3Remedio: React.FC<{ id?: string }> = ({ id = "remedio" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("remedio");
+  const c = useCues(id);
   const caeSobre = rango(frame, c("remedio") - 6, c("remedio") + 10);
   const caeSent = rango(frame, c("recurso") - 6, c("recurso") + 10);
   return (
@@ -38,7 +38,7 @@ export const E3Remedio: React.FC = () => {
           <Ficha at={c("remedio")} texto="ART. 356 CPC" />
         </div>
       </Escenario>
-      <Encuadre escenaId="remedio" etiqueta="¿Recurso o remedio?" pasos={[{ at: 0, modo: "ventana" }]} />
+      <Encuadre escenaId={id} etiqueta="¿Recurso o remedio?" pasos={[{ at: 0, modo: "ventana" }]} />
     </AbsoluteFill>
   );
 };

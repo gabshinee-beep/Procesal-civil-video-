@@ -1,23 +1,29 @@
 import React from "react";
 import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import broll from "../data/broll.json";
-import { cue, f, inicioEscena } from "../tiempos";
+import tomas from "../data/tomas.json";
+import { cue, escenas, f, inicioEscena } from "../tiempos";
 import { C, mono, sans, serif } from "../theme";
 import { Acabado } from "./Camara";
 import { rango } from "../anim";
 
 type Plano = (typeof broll.planos)[number] & { archivo: string | null };
 
-// Frame (relativo a la escena del plano) en que termina un B-roll: ahí se reanuda la animación.
-export const finBRoll = (id: string) => {
-  const p = broll.planos.find((x) => x.id === id)!;
-  return cue(p.escena, p.cue) + p.offset + f(p.dur);
+// Un plano se usa si ya tiene archivo, o en la maqueta (sin grabación) como marcador provisional.
+const sinGrabacion = escenas.every((e) => (tomas as Record<string, unknown>)[e.id] == null);
+const activos = () =>
+  (broll.planos as Plano[]).filter((p) => escenas.some((e) => e.id === p.escena) && (p.archivo || sinGrabacion));
+
+// Frame (relativo a la escena del plano) en que termina un B-roll; si el plano no se usa, `respaldo`.
+export const finBRoll = (id: string, respaldo = -Infinity) => {
+  const p = activos().find((x) => x.id === id);
+  return p ? cue(p.escena, p.cue) + p.offset + f(p.dur) : respaldo;
 };
 
 // Planos de recurso a pantalla completa. Tu voz sigue sonando debajo (viene de tu toma).
 export const BRoll: React.FC = () => (
   <>
-    {(broll.planos as Plano[]).map((p) => {
+    {activos().map((p) => {
       const at = inicioEscena(p.escena) + cue(p.escena, p.cue) + p.offset;
       return (
         <Sequence key={p.id} from={at} durationInFrames={f(p.dur)} name={`B-roll ${p.id}`}>

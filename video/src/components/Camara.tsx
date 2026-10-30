@@ -4,22 +4,35 @@ import tomas from "../data/tomas.json";
 import { C, mono, sans } from "../theme";
 import { entra, rango } from "../anim";
 
-type Toma = { archivo: string; desde: number } | null;
+type Toma = { archivo: string; desde: number; persona?: string; zoom?: [number, number] } | null;
+export const tomaDe = (escenaId: string) => (tomas as unknown as Record<string, Toma>)[escenaId];
 
 // Plano del presentador. Sin grabación todavía, muestra una toma provisional con la silueta
 // en el tercio izquierdo (el mismo encuadre que debes usar al grabar).
 // `golpes`: acercamientos de cámara en palabras clave (como un corte a plano más cerrado).
-export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [number, number]; golpes?: { at: number; escala: number }[] }> = ({
+// `capa="persona"`: solo tu recorte con transparencia (para poner gráficos detrás de ti).
+export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [number, number]; golpes?: { at: number; escala: number }[]; capa?: "video" | "persona" }> = ({
   escenaId,
   etiqueta,
-  zoom = [1, 1.04],
+  zoom: zoomProp,
   golpes = [],
+  capa = "video",
 }) => {
   const frame = useCurrentFrame();
   const { durationInFrames, fps } = useVideoConfig();
-  const toma = (tomas as unknown as Record<string, Toma>)[escenaId];
+  const toma = tomaDe(escenaId);
+  const zoom = zoomProp ?? toma?.zoom ?? [1, 1.04];
   const golpe = golpes.filter((g) => frame >= g.at).reduce((acc, g) => acc * (1 + (g.escala - 1) * entra(frame, g.at, 5)), 1);
   const escala = rango(frame, 0, durationInFrames, zoom[0], zoom[1]) * golpe;
+
+  if (capa === "persona") {
+    if (!toma?.persona) return null;
+    return (
+      <AbsoluteFill style={{ transform: `scale(${escala})`, transformOrigin: "30% 38%", filter: "contrast(1.06) saturate(0.88) sepia(0.07) brightness(1.02)" }}>
+        <OffthreadVideo src={staticFile(toma.persona)} transparent trimBefore={Math.round(toma.desde * fps)} muted style={{ position: "absolute", inset: 0 }} />
+      </AbsoluteFill>
+    );
+  }
 
   if (toma) {
     return (

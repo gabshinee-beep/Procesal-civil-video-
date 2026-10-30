@@ -9,9 +9,9 @@ import { entra } from "../anim";
 
 // Peldaño 4b: despiece del acto procesal en sus elementos; ¿dónde está el defecto?
 const CAPAS = ["Forma", "Capacidad", "Objeto", "Finalidad"];
-export const E4Elementos: React.FC = () => {
+export const E4Elementos: React.FC<{ id?: string }> = ({ id = "elementos" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("elementos");
+  const c = useCues(id);
   const abre = entra(frame, c("elementos") - 6, 24);
   const extr = frame >= c("forma");
   const intr = frame >= c("intrinseco");
@@ -43,7 +43,7 @@ export const E4Elementos: React.FC = () => {
           </div>
         )}
       </Escenario>
-      <Encuadre escenaId="elementos" etiqueta="Elementos y vicios" pasos={[{ at: 0, modo: "ventana" }]} />
+      <Encuadre escenaId={id} etiqueta="Elementos y vicios" pasos={[{ at: 0, modo: "ventana" }]} />
     </AbsoluteFill>
   );
 };

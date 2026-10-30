@@ -17,7 +17,8 @@ export const Personaje: React.FC<{
   tenue?: boolean;
   maletin?: boolean;
   etiqueta?: boolean;
-}> = ({ quien, x, y, escala = 1, tenue, maletin, etiqueta = true }) => {
+  nombre?: string;
+}> = ({ quien, x, y, escala = 1, tenue, maletin, etiqueta = true, nombre }) => {
   const p = PERSONAJES[quien];
   return (
     <div style={{ position: "absolute", left: x, top: y, transform: `translate(-50%, -100%) scale(${escala})`, transformOrigin: "50% 100%", opacity: tenue ? 0.28 : 1, textAlign: "center" }}>
@@ -29,7 +30,7 @@ export const Personaje: React.FC<{
       </svg>
       {etiqueta && (
         <div style={{ marginTop: 6 }}>
-          <div style={{ fontFamily: "Fraunces, serif", fontWeight: 600, fontSize: 26, color: C.tinta }}>{p.nombre}</div>
+          <div style={{ fontFamily: "Fraunces, serif", fontWeight: 600, fontSize: 26, color: C.tinta }}>{nombre ?? p.nombre}</div>
           <div style={{ fontFamily: mono, fontSize: 14, letterSpacing: 2, color: p.color }}>{p.rol}</div>
         </div>
       )}

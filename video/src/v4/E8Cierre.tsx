@@ -12,10 +12,10 @@ import { C, mono, sans, serif } from "../theme";
 import { entra, ventana } from "../anim";
 
 // Peldaño 8 y conclusión: validez provisional, efectos limitados (art. 173, en pantalla), excepcionalidad.
-export const E8Cierre: React.FC = () => {
+export const E8Cierre: React.FC<{ id?: string }> = ({ id = "cierre" }) => {
   const frame = useCurrentFrame();
-  const c = useCues("cierre");
-  const sello = finBRoll("sello");
+  const c = useCues(id);
+  const sello = finBRoll("sello", c("declare"));
   const final = c("pregunta") - 6;
   return (
     <AbsoluteFill style={{ background: C.noche }}>
@@ -45,7 +45,7 @@ export const E8Cierre: React.FC = () => {
           </Aparece>
         </Escenario>
       </div>
-      <Encuadre escenaId="cierre" etiqueta="Cierre" pasos={[{ at: 0, modo: "pip" }, { at: final, modo: "completo" }]} golpes={[{ at: c("respuesta"), escala: 1.08 }]} />
+      <Encuadre escenaId={id} etiqueta="Cierre" pasos={[{ at: 0, modo: "pip" }, { at: final, modo: "completo" }]} golpes={[{ at: c("respuesta"), escala: 1.08 }]} />
       {frame >= final && (
         <AbsoluteFill style={{ opacity: entra(frame, final + 6, 14) }}>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 40%, rgba(10,9,8,0.72) 64%)" }} />
@@ -57,7 +57,7 @@ export const E8Cierre: React.FC = () => {
           </div>
           <div style={{ position: "absolute", left: 1060, top: 300, width: 800, opacity: entra(frame, c("couture"), 16) }}>
             <div style={{ fontFamily: serif, fontSize: 140, lineHeight: 0.6, color: C.rojo }}>“</div>
-            <CitaCinetica escenaId="cierre" texto="la anulación por la anulación no vale." respaldoDesde={c("couture2")} style={{ fontFamily: serif, fontStyle: "italic", fontSize: 66, lineHeight: 1.15, color: C.papel }} />
+            <CitaCinetica escenaId={id} texto="la anulación por la anulación no vale." respaldoDesde={c("couture2")} style={{ fontFamily: serif, fontStyle: "italic", fontSize: 66, lineHeight: 1.15, color: C.papel }} />
             <div style={{ fontFamily: mono, fontSize: 22, letterSpacing: 3, color: "rgba(243,237,226,0.7)", marginTop: 26 }}>— EDUARDO COUTURE</div>
           </div>
         </AbsoluteFill>
