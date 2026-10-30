@@ -4,6 +4,7 @@ import guion from "../data/guion.json";
 import { cue, escenas, inicioEscena } from "../tiempos";
 import { C, mono } from "../theme";
 import { entra } from "../anim";
+import { preguntas } from "../libre/Pregunta";
 
 // La escalera de ideas, visible: cada peldaño se enciende cuando el razonamiento llega a él.
 const peldanoActual = (frame: number) => {
@@ -24,6 +25,23 @@ export const Escalera: React.FC<{ visibleDesde: number; visibleHasta: number }> 
   const frame = useCurrentFrame();
   if (frame < visibleDesde || frame >= visibleHasta) return null;
   const { n, demo } = peldanoActual(frame);
+  const ps = preguntas() as unknown as { id: string; pregunta: { n: number; texto: string } }[];
+  if (ps.length) {
+    const actual = [...ps].reverse().find((e) => frame >= inicioEscena(e.id));
+    const k = actual?.pregunta.n ?? 0;
+    return (
+      <div style={{ position: "absolute", right: 60, top: 26, padding: "10px 18px", borderRadius: 12, background: "rgba(20,18,16,0.86)", display: "flex", alignItems: "center", gap: 14, opacity: entra(frame, visibleDesde, 16) }}>
+        <div style={{ display: "flex", gap: 5 }}>
+          {ps.map((p) => (
+            <div key={p.id} style={{ width: 22, height: 8, borderRadius: 4, background: p.pregunta.n === k ? C.rojo : p.pregunta.n < k ? C.papel : "rgba(243,237,226,0.18)" }} />
+          ))}
+        </div>
+        <div style={{ fontFamily: mono, fontSize: 17, letterSpacing: 2.5, color: C.papel }}>
+          <span style={{ color: C.rojo }}>PREGUNTA {k}/{ps.length}</span>
+        </div>
+      </div>
+    );
+  }
   const o = entra(frame, visibleDesde, 16);
   return (
     <div style={{ position: "absolute", right: 60, top: 26, height: 64, padding: "10px 18px", borderRadius: 12, background: "rgba(20,18,16,0.86)", display: "flex", alignItems: "flex-end", gap: 14, opacity: o }}>
