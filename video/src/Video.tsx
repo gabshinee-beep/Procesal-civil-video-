@@ -21,6 +21,7 @@ import { escenas, inicioEscena, duracionEscena, inicioCreditos, cue, f } from ".
 import { Presentador, NulidadDetras, PartesEnManos } from "./libre/Modulos";
 import { PrincipiosPartes } from "./libre/PrincipiosPartes";
 import { Preguntas } from "./libre/Pregunta";
+import { EtiquetasMano } from "./libre/EtiquetasMano";
 
 // La escalera aparece desde el primer peldaño 2 en adelante y se oculta en la conclusión.
 const inicioEscalera = () => {
@@ -81,6 +82,7 @@ export const Video: React.FC<{ modo: "completo" | "respaldo" }> = ({ modo }) => 
     {modo === "completo" && <Escalera visibleDesde={inicioEscalera()} visibleHasta={finEscalera()} />}
     <BRoll />
     {modo === "completo" && <Preguntas />}
+    {modo === "completo" && <EtiquetasMano />}
     <TituloCine hasta={escenas.length ? inicioEscena(escenas[0].id) + finBRoll("expediente", f(3.2)) : 0} />
     <Subtitulos />
     <Creditos at={inicioCreditos()} />
