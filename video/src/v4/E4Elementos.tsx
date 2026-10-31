@@ -17,7 +17,7 @@ export const E4Elementos: React.FC<{ id?: string }> = ({ id = "elementos" }) => 
   const intr = frame >= c("intrinseco");
   return (
     <AbsoluteFill style={{ background: C.noche }}>
-      <Escenario kicker="Peldaño 4 · ¿Dónde está el defecto?" titulo="Los elementos del acto" x={760}>
+      <Escenario kicker="Pregunta 3 · ¿Dónde está el defecto?" titulo="Los elementos del acto" x={760}>
         <Aparece at={c("acto")} style={{ left: 760, top: 222 }}>
           <Ficha at={c("acto")} texto="ART. 140 CC · ACTO JURÍDICO" />
         </Aparece>

@@ -1,10 +1,86 @@
 {
-  "_nota": "Cuando grabes, pon cada toma elegida en public/footage/ y completa aquí: { \"archivo\": \"footage/gancho.mp4\", \"desde\": 1.2 } (segundos). null = toma provisional.",
-  "gancho": null,
-  "concepto": null,
-  "problema": null,
-  "principios": null,
-  "casoA": null,
-  "casoB": null,
-  "cierre": null
+ "q1": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 0,
+  "hasta": 27.6,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {
+   "civil": 5.93,
+   "impugnatorio": 12.07,
+   "finalidad": 16.47
+  }
+ },
+ "q2": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 27.6,
+  "hasta": 56.2,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {
+   "que": 2.75,
+   "sentencia": 11.85,
+   "recurso": 18.81,
+   "resolucion": 21.57,
+   "remedio": 27.45
+  }
+ },
+ "q3": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 56.2,
+  "hasta": 82.0,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {
+   "donde": 3.47,
+   "acto": 4.97,
+   "elementos": 6.61,
+   "publica": 999,
+   "forma": 14.87,
+   "intrinseco": 19.93,
+   "nuestro": 999
+  }
+ },
+ "q4": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 82.0,
+  "hasta": 92.6,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {}
+ },
+ "q5": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 92.6,
+  "hasta": 162.4,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {
+   "finalidad": 12.61,
+   "proteccion": 23.81,
+   "especificidad": 37.55,
+   "convalidacion": 48.79,
+   "trascendencia": 62.49
+  }
+ },
+ "cierre": {
+  "archivo": "footage/tomaA_land.mp4",
+  "desde": 162.4,
+  "hasta": 164.58,
+  "foco": {
+   "x": 576,
+   "y": 420
+  },
+  "cues": {}
+ }
 }

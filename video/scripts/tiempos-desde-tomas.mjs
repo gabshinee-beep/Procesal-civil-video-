@@ -7,7 +7,7 @@ import path from "node:path";
 
 const guion = JSON.parse(readFileSync("src/data/guion.json", "utf8"));
 const tomas = JSON.parse(readFileSync("src/data/tomas.json", "utf8"));
-const GAP = 0.15;
+const GAP = Number(process.env.GAP ?? 0.15);
 const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9ñ ]/g, "").trim();
 
 let t = 0;

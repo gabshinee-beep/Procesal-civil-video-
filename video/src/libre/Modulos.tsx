@@ -56,10 +56,25 @@ export const PreguntaDetras: React.FC<{ id: string; hasta?: number }> = ({ id, h
 const conRecorte = (id: string) => !!(tomaDe(id) as { persona?: string } | null)?.persona;
 
 // Tú a pantalla completa, con tu pregunta detrás y rótulos opcionales. Módulo «comodín».
+export const PreguntaLado: React.FC<{ id: string }> = ({ id }) => {
+  const frame = useCurrentFrame();
+  const q = seg(id).pregunta;
+  if (!q) return null;
+  const at = escenas[0].id === id ? 112 : 4;
+  const o = Math.min(entra(frame, at, 18), 1 - entra(frame, at + 170, 18));
+  if (o <= 0.001) return null;
+  return (
+    <div style={{ position: "absolute", left: 980, right: 80, top: 330, opacity: o, transform: `translateX(${(1 - o) * 40}px)` }}>
+      <div style={{ fontFamily: mono, fontSize: 24, letterSpacing: 8, color: C.ambar }}>PREGUNTA {q.n}</div>
+      <div style={{ fontFamily: serif, fontWeight: 700, fontSize: 76, lineHeight: 1.04, color: C.papel, marginTop: 12 }}>{q.texto}</div>
+    </div>
+  );
+};
+
 export const Presentador: React.FC<{ id?: string }> = ({ id = "" }) => (
   <AbsoluteFill>
     <Camara escenaId={id} etiqueta="Presentador" />
-    {conRecorte(id) && <PreguntaDetras id={id} />}
+    {conRecorte(id) ? <PreguntaDetras id={id} /> : <PreguntaLado id={id} />}
     <Camara escenaId={id} etiqueta="Presentador" capa="persona" />
     <Rotulos id={id} />
   </AbsoluteFill>

@@ -16,7 +16,7 @@ export const Preguntas: React.FC = () => {
       {preguntas()
         .filter((e) => {
           const m = (e as { modulo?: string }).modulo;
-          const detras = (m === "presentador" || m === "nulidadDetras") && !!(tomaDe(e.id) as { persona?: string } | null)?.persona;
+          const detras = m === "presentador" || (m === "nulidadDetras" && !!(tomaDe(e.id) as { persona?: string } | null)?.persona);
           return !detras;
         })
         .map((e) => {

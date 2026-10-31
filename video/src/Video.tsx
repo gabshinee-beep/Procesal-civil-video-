@@ -58,9 +58,9 @@ const TituloCine: React.FC<{ hasta: number }> = ({ hasta }) => {
   if (frame > hasta) return null;
   const o = Math.min(entra(frame, 4, 16), sale(frame, hasta - 8, 8));
   return (
-    <AbsoluteFill style={{ opacity: o, background: "linear-gradient(to top, rgba(10,9,8,0.75), transparent 60%)" }}>
-      <div style={{ position: "absolute", left: 120, bottom: 300, fontFamily: mono, fontSize: 22, letterSpacing: 6, color: C.ambar }}>LA NULIDAD PROCESAL SEGÚN ANA MARÍA ARRARTE</div>
-      <div style={{ position: "absolute", left: 120, bottom: 190, fontFamily: serif, fontWeight: 600, fontSize: 84, color: C.papel }}>{guion.titulo}</div>
+    <AbsoluteFill style={{ opacity: o }}>
+      <div style={{ position: "absolute", left: 980, top: 380, fontFamily: mono, fontSize: 22, letterSpacing: 6, color: C.ambar }}>{guion.subtitulo.toUpperCase()}</div>
+      <div style={{ position: "absolute", left: 980, right: 70, top: 420, fontFamily: serif, fontWeight: 600, fontSize: 84, lineHeight: 1.05, color: C.papel }}>{guion.titulo}</div>
     </AbsoluteFill>
   );
 };

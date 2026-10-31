@@ -26,11 +26,11 @@ export const E3Remedio: React.FC<{ id?: string }> = ({ id = "remedio" }) => {
   const caeSent = rango(frame, c("recurso") - 6, c("recurso") + 10);
   return (
     <AbsoluteFill style={{ background: C.noche }}>
-      <Escenario kicker="Peldaño 4 · ¿Qué se cuestiona?" titulo="¿Recurso o remedio?" x={760}>
-        <Bandeja x={760} titulo="Recurso" sub="El acto está en una resolución" ej="decreto · auto · sentencia" activa={frame >= c("recurso")} at={6} />
-        <Bandeja x={1340} titulo="Remedio" sub="El acto no está en una resolución" ej="notificación · audiencia" activa={frame >= c("remedio") && frame < c("sentencia")} at={10} />
+      <Escenario kicker="Pregunta 2 · ¿Qué se cuestiona?" titulo="¿Recurso o remedio?" x={760}>
+        <Bandeja x={760} titulo="Recurso" sub="El acto está en una resolución" ej="decreto · auto · sentencia" activa={frame >= c("recurso") && !(c("remedio") > c("recurso") && frame >= c("remedio"))} at={6} />
+        <Bandeja x={1340} titulo="Remedio" sub="El acto no está en una resolución" ej="notificación · audiencia" activa={frame >= c("remedio") && !(c("recurso") > c("remedio") && frame >= c("recurso"))} at={10} />
         <Aparece at={c("resolucion")} style={{ left: 1420, top: 240, width: 360, textAlign: "center" }}>
-          <div style={{ fontFamily: mono, fontSize: 18, letterSpacing: 2, color: C.tintaSuave }}>NOTIFICACIÓN DEL CASO</div>
+          <div style={{ fontFamily: mono, fontSize: 18, letterSpacing: 2, color: C.tintaSuave }}>P. EJ., UNA NOTIFICACIÓN</div>
         </Aparece>
         {frame >= c("resolucion") && <Sobre x={1590} y={330 + caeSobre * 480} escala={1.4} giro={-6 + caeSobre * 6} />}
         {frame >= c("sentencia") && <Documento x={1010} y={310 + caeSent * 470} titulo="SENTENCIA" escala={0.75} />}

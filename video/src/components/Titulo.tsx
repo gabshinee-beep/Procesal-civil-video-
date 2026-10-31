@@ -48,8 +48,13 @@ export const Creditos: React.FC<{ at: number }> = ({ at }) => {
   return (
     <AbsoluteFill style={{ background: C.papel, opacity: p }}>
       <Grano />
-      <div style={{ position: "absolute", left: 160, top: 260, fontFamily: mono, fontSize: 22, letterSpacing: 5, color: C.rojo }}>FUENTES</div>
-      <div style={{ position: "absolute", left: 160, top: 320, width: 1600 }}>
+      {(guion.creditos as { cita?: string }).cita && (
+        <div style={{ position: "absolute", left: 160, top: 120, width: 1600, fontFamily: serif, fontStyle: "italic", fontSize: 52, color: C.tinta, opacity: entra(frame, at + 2, 14) }}>
+          {(guion.creditos as { cita?: string }).cita}
+        </div>
+      )}
+      <div style={{ position: "absolute", left: 160, top: 300, fontFamily: mono, fontSize: 22, letterSpacing: 5, color: C.rojo }}>FUENTES</div>
+      <div style={{ position: "absolute", left: 160, top: 350, width: 1600 }}>
         {guion.creditos.fuentes.map((s, i) => (
           <div key={i} style={{ fontFamily: serif, fontSize: 40, lineHeight: 1.35, color: C.tinta, marginBottom: 22, opacity: entra(frame, at + 6 + i * 6, 14) }}>
             {s}
