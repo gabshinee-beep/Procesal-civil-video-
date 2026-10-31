@@ -19,7 +19,7 @@ const RECT: Record<Modo, Rect> = {
 // Con recorte de persona disponible, los modos «en caja» se vuelven «tú dentro del expediente»:
 // el cuarto se disuelve y quedas recortado (estilo collage de papel) en estos puntos de la escena.
 const RECORTE: Record<Exclude<Modo, "completo">, { cx: number; cy: number; s: number }> = {
-  ventana: { cx: 390, cy: 640, s: 0.78 },
+  ventana: { cx: 400, cy: 470, s: 1.1 },
   pip: { cx: 250, cy: 770, s: 0.58 },
   centro: { cx: 960, cy: 760, s: 0.58 },
 };
@@ -109,11 +109,10 @@ const EnRecorte: React.FC<{ escenaId: string; etiqueta: string; pasos: { at: num
   const borde = 5 * k;
   return (
     <>
-      {k < 0.999 && (
-        <div style={{ position: "absolute", inset: 0, opacity: 1 - k }}>
-          <Camara escenaId={escenaId} etiqueta={etiqueta} golpes={golpes} zoom={[1, 1.03]} />
-        </div>
-      )}
+      {/* siempre montada: de esta capa sale el audio de tu toma */}
+      <div style={{ position: "absolute", inset: 0, opacity: 1 - k }}>
+        <Camara escenaId={escenaId} etiqueta={etiqueta} golpes={golpes} zoom={[1, 1.03]} />
+      </div>
       <div
         style={{
           position: "absolute",

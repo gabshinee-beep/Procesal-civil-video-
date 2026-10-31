@@ -1,10 +1,18 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import tomas from "../data/tomas.json";
 import { C, mono, sans } from "../theme";
 import { entra, rango } from "../anim";
 
-type Toma = { archivo: string; desde: number; persona?: string; zoom?: [number, number] } | null;
+type Rect = { x: number; y: number; w: number; h: number };
+type Toma = { archivo: string; desde: number; persona?: string; personaRect?: Rect; sinFondo?: boolean; zoom?: [number, number] } | null;
+// Difumina los bordes donde el encuadre original cortaba el cuerpo (lados y parte inferior).
+const BORDES_SUAVES: React.CSSProperties = {
+  maskImage: "linear-gradient(to right, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%), linear-gradient(to top, transparent 0, #000 120px)",
+  WebkitMaskImage: "linear-gradient(to right, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%), linear-gradient(to top, transparent 0, #000 120px)",
+  maskComposite: "intersect",
+  WebkitMaskComposite: "source-in",
+};
 export const tomaDe = (escenaId: string) => (tomas as unknown as Record<string, Toma>)[escenaId];
 
 // Plano del presentador. Sin grabación todavía, muestra una toma provisional con la silueta
@@ -29,7 +37,18 @@ export const Camara: React.FC<{ escenaId: string; etiqueta: string; zoom?: [numb
     if (!toma?.persona) return null;
     return (
       <AbsoluteFill style={{ transform: `scale(${escala})`, transformOrigin: "30% 38%", filter: "contrast(1.06) saturate(0.88) sepia(0.07) brightness(1.02)" }}>
-        <OffthreadVideo src={staticFile(toma.persona)} transparent trimBefore={Math.round(toma.desde * fps)} muted style={{ position: "absolute", inset: 0 }} />
+        <OffthreadVideo src={staticFile(toma.persona)} transparent trimBefore={Math.round(toma.desde * fps)} muted style={toma.personaRect ? { position: "absolute", left: toma.personaRect.x, top: toma.personaRect.y, width: toma.personaRect.w, height: toma.personaRect.h, ...BORDES_SUAVES } : { position: "absolute", inset: 0 }} />
+      </AbsoluteFill>
+    );
+  }
+
+  // Sin fondo: tu cuarto se reemplaza por un fondo de estudio; el audio sigue saliendo de tu toma.
+  if (toma?.sinFondo) {
+    return (
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 900px 800px at 576px 560px, #4a3f35 0%, #2a241f 45%, ${C.noche} 100%)` }}>
+        <Audio src={staticFile(toma.archivo)} trimBefore={Math.round(toma.desde * fps)} />
+        <AbsoluteFill style={{ background: "radial-gradient(circle 420px at 576px 420px, rgba(255,226,180,0.10), transparent 70%)" }} />
+        <Acabado />
       </AbsoluteFill>
     );
   }

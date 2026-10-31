@@ -5,13 +5,21 @@
   "hasta": 27.6,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
   "cues": {
    "civil": 5.93,
    "impugnatorio": 12.07,
    "finalidad": 16.47
-  }
+  },
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  },
  "q2": {
   "archivo": "footage/tomaA_land.mp4",
@@ -19,7 +27,7 @@
   "hasta": 56.2,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
   "cues": {
    "que": 2.75,
@@ -27,7 +35,15 @@
    "recurso": 18.81,
    "resolucion": 21.57,
    "remedio": 27.45
-  }
+  },
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  },
  "q3": {
   "archivo": "footage/tomaA_land.mp4",
@@ -35,7 +51,7 @@
   "hasta": 82.0,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
   "cues": {
    "donde": 3.47,
@@ -45,7 +61,15 @@
    "forma": 14.87,
    "intrinseco": 19.93,
    "nuestro": 999
-  }
+  },
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  },
  "q4": {
   "archivo": "footage/tomaA_land.mp4",
@@ -53,9 +77,17 @@
   "hasta": 92.6,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
-  "cues": {}
+  "cues": {},
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  },
  "q5": {
   "archivo": "footage/tomaA_land.mp4",
@@ -63,7 +95,7 @@
   "hasta": 162.4,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
   "cues": {
    "finalidad": 12.61,
@@ -71,7 +103,15 @@
    "especificidad": 37.55,
    "convalidacion": 48.79,
    "trascendencia": 62.49
-  }
+  },
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  },
  "cierre": {
   "archivo": "footage/tomaA_land.mp4",
@@ -79,8 +119,16 @@
   "hasta": 164.58,
   "foco": {
    "x": 576,
-   "y": 420
+   "y": 580
   },
-  "cues": {}
+  "cues": {},
+  "persona": "footage/personaA.webm",
+  "personaRect": {
+   "x": 272,
+   "y": 0,
+   "w": 608,
+   "h": 1080
+  },
+  "sinFondo": true
  }
 }
